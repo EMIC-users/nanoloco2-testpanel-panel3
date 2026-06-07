@@ -11,6 +11,9 @@
 #include "inc/Keyboard_Pad.h"
 #include "inc/Keyboard_Nav.h"
 
+/* User Arrays */
+char STR_KEY[3];
+
 void onReset()
 {
     Graphics_OLED_clear();
@@ -23,7 +26,8 @@ void onReset()
 void Keyboard_Pad_onPress(uint8_t key)
 {
     LEDs_Led1_state(2);
-    Graphics_OLED_printAt(0, 20, 1, /* temp conversion needed */ key);
+    uint8_t_to_ascii(key, STR_KEY, 3);
+    Graphics_OLED_printAt(0, 20, 1, STR_KEY);
 }
 
 
