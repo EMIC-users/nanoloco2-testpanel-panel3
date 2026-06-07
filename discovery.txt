@@ -1,0 +1,109 @@
+
+//-------------- Hardware Config ---------------------
+
+//------------------- Process EMIC-Generate files result ----------------
+
+//------------------- APIs (basic skeleton) -----------------------
+
+// LEDs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Timer
+
+
+
+
+
+
+
+
+
+
+// OLED Display (SSD1322 128x64 via PMP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Keyboard Pad 3x4 (drive rows, sense columns with internal pull-up)
+
+
+
+
+
+
+
+
+
+// Keyboard Nav 3x3 (row3 reuses ROW2 — dead case, ROWS=3)
+
+
+
+
+
+
+
+
+
+// EMIC Bus (I2C communication)
+// DESHABILITADO (Etapa 2): rompe el display OLED. Re-habilitar/depurar en Etapa 4.
+//EMIC:setInput(DEV:_api/Wired_Communication/EMICBus/EMICBus.emic,port=1,frameID=0)
+
+//-------------------- main  -----------------------
+
+
+
+
+
+
+
+
+
+
+
