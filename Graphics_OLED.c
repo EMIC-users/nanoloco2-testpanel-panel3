@@ -6,6 +6,7 @@
 #include "inc/font_7x9.h"
 #include "inc/font_16x32.h"
 #include "inc/streamOut.h"
+#include "inc/streamIn.h"
 
 /*==================[internal macros]=======================================*/
 

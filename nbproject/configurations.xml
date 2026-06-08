@@ -18,6 +18,7 @@
       <itemPath>led_Led1.c</itemPath>
       <itemPath>led_Led2.c</itemPath>
       <itemPath>timer_api1.c</itemPath>
+      <itemPath>streamIn.c</itemPath>
       <itemPath>pmp.c</itemPath>
       <itemPath>SSD1322_OLED.c</itemPath>
       <itemPath>Graphics_OLED.c</itemPath>
