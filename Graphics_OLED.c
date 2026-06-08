@@ -14,6 +14,7 @@
 /*==================[internal data]=========================================*/
 
 uint64_t Graphics_OLED_framebuffer[GFX_OLED_WIDTH];
+const streamOut_t streamOut_Graphic_OLED = {putChar, putCharAvailable};
 
 static int16_t cursorX = 0;
 static int16_t cursorY = 0;
@@ -99,7 +100,7 @@ static void setFont(uint8_t fontId)
     fontHeight = fontHeights[fontId];
 }
 
-static uint16_t putCharAvsilable()
+static uint16_t putCharAvailable()
 {
     return 1;
 }

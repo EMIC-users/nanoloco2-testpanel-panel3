@@ -8,6 +8,7 @@
 #include <stdlib.h>
 
 // includes type definitions
+#include "streamOut.h"
 
 /* Function Prototypes */
 void onReset();
