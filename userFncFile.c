@@ -26,13 +26,13 @@ void onReset()
 void Keyboard_Nav_onPress(uint8_t key)
 {
     LEDs_Led1_state(2);
-    Graphics_OLED_printAt(0, 20, 0, "TECLA:%u ", key);
 }
 
 
 void Keyboard_Pad_onPress(uint8_t key)
 {
     LEDs_Led2_state(2);
+    Graphics_OLED_printAt(0, 30, 0, "TECLA:%u ", key);
 }
 
 

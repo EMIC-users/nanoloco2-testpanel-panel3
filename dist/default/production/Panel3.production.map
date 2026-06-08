@@ -4,15 +4,10 @@ Tool Name:
   c:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp0000561c.00 \
-  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp0000561c.01 \
-  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp0000561c.02 \
-  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp0000561c.03 \
-  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp0000561c.04 \
   -p24FJ64GA004 \
   --mdfp=C:/Users/RFI1/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16 \
   -o \
-  dist/default/debug/Panel3.debug.elf \
+  dist/default/production/Panel3.production.elf \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/.. \
   -LC:/Users/RFI1/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16/bin/../support/PIC24F/gld \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../lib \
@@ -29,24 +24,21 @@ Command:
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../lib/dsPIC33F \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33F/gld \
-  build/default/debug/timer.o \
-  build/default/debug/systemTimer.o \
-  build/default/debug/led_Led1.o \
-  build/default/debug/led_Led2.o \
-  build/default/debug/timer_api1.o \
-  build/default/debug/pmp.o \
-  build/default/debug/SSD1322_OLED.o \
-  build/default/debug/Graphics_OLED.o \
-  build/default/debug/Keyboard_Pad.o \
-  build/default/debug/Keyboard_Nav.o \
-  build/default/debug/main.o \
-  build/default/debug/userFncFile.o \
-  build/default/debug/streamIn.o \
+  build/default/production/timer.o \
+  build/default/production/systemTimer.o \
+  build/default/production/led_Led1.o \
+  build/default/production/led_Led2.o \
+  build/default/production/timer_api1.o \
+  build/default/production/pmp.o \
+  build/default/production/SSD1322_OLED.o \
+  build/default/production/Graphics_OLED.o \
+  build/default/production/Keyboard_Pad.o \
+  build/default/production/Keyboard_Nav.o \
+  build/default/production/main.o \
+  build/default/production/userFncFile.o \
+  build/default/production/streamIn.o \
   --defsym=__MPLAB_BUILD=1 \
-  --defsym=__MPLAB_DEBUG=1 \
-  --defsym=__DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_PK3=1 \
-  -Tp24FJ64GA004.gld.05 \
+  -Tp24FJ64GA004.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -58,10 +50,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/debug/Panel3.debug.map \
+  -Map=dist/default/production/Panel3.production.map \
   --report-mem \
   --memorysummary \
-  dist/default/debug/memoryfile.xml \
+  dist/default/production/memoryfile.xml \
   -start-group \
   --library=c99-pic30-elf \
   --library=m-elf \
@@ -77,11 +69,11 @@ c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normal.Meo)
                               (__crt_start_mode_normal)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                              build/default/debug/SSD1322_OLED.o (___delay32)
+                              build/default/production/SSD1322_OLED.o (___delay32)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(memset.XX_o)
-                              build/default/debug/streamIn.o (_memset)
+                              build/default/production/streamIn.o (_memset)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(snprintf.XX_o)
-                              build/default/debug/streamIn.o (_snprintf)
+                              build/default/production/streamIn.o (_snprintf)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(vsnprintf.XX_o)
                               c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(snprintf.XX_o) (_vsnprintf)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(vfprintf.XX_o)
@@ -91,7 +83,7 @@ c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_co
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(memcpy.XX_o)
                               c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o) (_memcpy)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(atof.XX_o)
-                              build/default/debug/streamIn.o (_atof)
+                              build/default/production/streamIn.o (_atof)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(strtod.XX_o)
                               c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(atof.XX_o) (_strtod)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(floatscan.XX_o)
@@ -105,11 +97,11 @@ c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__toread.XX
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__stdio_exit.XX_o)
                               c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__toread.XX_o) (___stdio_exit_needed)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(atoi.XX_o)
-                              build/default/debug/streamIn.o (_atoi)
+                              build/default/production/streamIn.o (_atoi)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(atol.XX_o)
-                              build/default/debug/streamIn.o (_atol)
+                              build/default/production/streamIn.o (_atol)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(atoll.XX_o)
-                              build/default/debug/streamIn.o (_atoll)
+                              build/default/production/streamIn.o (_atoll)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_lo)
                               c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(vsnprintf.XX_o) (___errno_val)
 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__io_fmt_needed.XX_lo)
@@ -257,20 +249,15 @@ section                    address   length (PC units)   length (bytes) (dec)
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x800           0x800                0x20            0x20  (32)
-reserve_data_0x820           0x820                 0x2             0x2  (2)
-reserve_data_0x822           0x822                 0x2             0x2  (2)
-reserve_data_0x824           0x824                 0x2             0x2  (2)
-reserve_data_0x826           0x826                0x2a            0x2a  (42)
-.nbss                        0x850                   0            0x18  (24)
-.ndata                       0x868                   0             0x2  (2)
-.bss                         0x86a                   0           0x400  (1024)
-.data                        0xc6a                   0            0x36  (54)
-.bss                         0xca0                   0            0x40  (64)
-.data                        0xce0                   0            0x3c  (60)
-.bss                         0xd1c                   0             0x8  (8)
+.nbss                        0x800                   0            0x18  (24)
+.ndata                       0x818                   0             0x2  (2)
+.bss                         0x81a                   0           0x400  (1024)
+.data                        0xc1a                   0            0x36  (54)
+.bss                         0xc50                   0            0x40  (64)
+.data                        0xc90                   0            0x3c  (60)
+.bss                         0xccc                   0             0x8  (8)
 
-                 Total "data" memory used (bytes):          0x524  (1316) 16%
+                 Total "data" memory used (bytes):          0x4d4  (1236) 15%
 
 
 Dynamic Memory Usage
@@ -278,24 +265,24 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xd24                              0x1adc  (6876)
+stack                        0xcd4                              0x1b2c  (6956)
 
-                 Maximum dynamic memory (bytes):         0x1adc  (6876)
+                 Maximum dynamic memory (bytes):         0x1b2c  (6956)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
 
 External Symbols in Data Memory (by address):
 
-                    0x086a                  _Graphics_OLED_framebuffer
-                    0x0d1c                  _STR_KEY
-                    0x0d22                  ___errno_val
+                    0x081a                  _Graphics_OLED_framebuffer
+                    0x0ccc                  _STR_KEY
+                    0x0cd2                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x086a                  _Graphics_OLED_framebuffer
-                    0x0d1c                  _STR_KEY
-                    0x0d22                  ___errno_val
+                    0x081a                  _Graphics_OLED_framebuffer
+                    0x0ccc                  _STR_KEY
+                    0x0cd2                  ___errno_val
 
 External Symbols in Program Memory (by address):
 
@@ -345,11 +332,11 @@ External Symbols in Program Memory (by address):
                   0x002d88                  _toupper
                   0x002d94                  ___toupper_l
                   0x002d96                  ___stpcpy
-                  0x002dd6                  ___ltdf2
-                  0x002dd6                  ___ledf2
                   0x002dd6                  ___eqdf2
-                  0x002de0                  ___gtdf2
+                  0x002dd6                  ___ledf2
+                  0x002dd6                  ___ltdf2
                   0x002de0                  ___gedf2
+                  0x002de0                  ___gtdf2
                   0x002dea                  ___divsi3
                   0x002e08                  ___nedf2
                   0x002e12                  ___extendsfdf2
@@ -362,8 +349,8 @@ External Symbols in Program Memory (by address):
                   0x002f38                  ___udivsi3
                   0x002f58                  ___umodsi3
                   0x002f5e                  ___mulp32eds3
-                  0x002f5e                  ___mulsi3
                   0x002f5e                  ___mulp32peds3
+                  0x002f5e                  ___mulsi3
                   0x002f6a                  ___subdf3
                   0x002f76                  ___adddf3
                   0x00300c                  ___divdf3
@@ -374,8 +361,8 @@ External Symbols in Program Memory (by address):
                   0x003368                  __drndex
                   0x003372                  __dnsrnd
                   0x00339e                  __dpakex
-                  0x0033ac                  ___mulsf3
                   0x0033ac                  ___mulsf3x
+                  0x0033ac                  ___mulsf3
                   0x0034b8                  __dnrmpackf
                   0x00350c                  __unpackdnrmf
                   0x00356a                  __typef
@@ -424,8 +411,8 @@ External Symbols in Program Memory (by address):
                   0x004fa4                  _Graphics_OLED_clear
                   0x004fca                  _Graphics_OLED_pixel
                   0x005084                  _Graphics_OLED_line
-                  0x005240                  build/default/debug/Graphics_OLED.o:_putCharAvailable
-                  0x005248                  build/default/debug/Graphics_OLED.o:_putChar
+                  0x005240                  build/default/production/Graphics_OLED.o:_putCharAvailable
+                  0x005248                  build/default/production/Graphics_OLED.o:_putChar
                   0x005412                  _Graphics_OLED_print
                   0x005428                  _Graphics_OLED_printAt
                   0x0054f4                  _Keyboard_Pad_init
@@ -626,8 +613,8 @@ External Symbols in Program Memory (by name):
                   0x002d88                  _toupper
                   0x000424                  _vfprintf
                   0x0003d4                  _vsnprintf
-                  0x005248                  build/default/debug/Graphics_OLED.o:_putChar
-                  0x005240                  build/default/debug/Graphics_OLED.o:_putCharAvailable
+                  0x005248                  build/default/production/Graphics_OLED.o:_putChar
+                  0x005240                  build/default/production/Graphics_OLED.o:_putCharAvailable
 
 Memory Configuration
 
@@ -644,48 +631,20 @@ CONFIG1          0x00abfe           0x000002
 
 Linker script and memory map
 
-
-reserve_data_0x800
-                    0x0800         0x20
-                    0x0820                  . = 0x20
- *fill*             0x0800         0x2000
-
-reserve_data_0x820
-                    0x0820          0x2
-                    0x0822                  . = 0x2
- *fill*             0x0820          0x200
-
-reserve_data_0x822
-                    0x0822          0x2
-                    0x0824                  . = 0x2
- *fill*             0x0822          0x200
-
-reserve_data_0x824
-                    0x0824          0x2
-                    0x0826                  . = 0x2
- *fill*             0x0824          0x200
-
-reserve_data_0x826
-                    0x0826         0x2a
-                    0x0850                  . = 0x2a
- *fill*             0x0826         0x2a00
-LOAD build/default/debug/timer.o
-LOAD build/default/debug/systemTimer.o
-LOAD build/default/debug/led_Led1.o
-LOAD build/default/debug/led_Led2.o
-LOAD build/default/debug/timer_api1.o
-LOAD build/default/debug/pmp.o
-LOAD build/default/debug/SSD1322_OLED.o
-LOAD build/default/debug/Graphics_OLED.o
-LOAD build/default/debug/Keyboard_Pad.o
-LOAD build/default/debug/Keyboard_Nav.o
-LOAD build/default/debug/main.o
-LOAD build/default/debug/userFncFile.o
-LOAD build/default/debug/streamIn.o
+LOAD build/default/production/timer.o
+LOAD build/default/production/systemTimer.o
+LOAD build/default/production/led_Led1.o
+LOAD build/default/production/led_Led2.o
+LOAD build/default/production/timer_api1.o
+LOAD build/default/production/pmp.o
+LOAD build/default/production/SSD1322_OLED.o
+LOAD build/default/production/Graphics_OLED.o
+LOAD build/default/production/Keyboard_Pad.o
+LOAD build/default/production/Keyboard_Nav.o
+LOAD build/default/production/main.o
+LOAD build/default/production/userFncFile.o
+LOAD build/default/production/streamIn.o
                     0x0001                  __MPLAB_BUILD = 0x1
-                    0x0001                  __MPLAB_DEBUG = 0x1
-                    0x0001                  __DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib/PIC24F\libpPIC24Fxxx-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
@@ -716,7 +675,7 @@ LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0002d4         0x28 build/default/debug/timer.o
+ .isr.text        0x0002d4         0x28 build/default/production/timer.o
                   0x0002d4                  __T4Interrupt
  .isr             0x0002fc          0x4 default_isr
                   0x0002fc                  __DefaultInterrupt
@@ -1028,19 +987,19 @@ __CONFIG1
 
 .debug_info       0x000000       0x5d8c
  *(.debug_info)
- .debug_info      0x000000        0x4a3 build/default/debug/timer.o
- .debug_info      0x0004a3        0x1b7 build/default/debug/systemTimer.o
- .debug_info      0x00065a        0x514 build/default/debug/led_Led1.o
- .debug_info      0x000b6e        0x514 build/default/debug/led_Led2.o
- .debug_info      0x001082        0x15e build/default/debug/timer_api1.o
- .debug_info      0x0011e0        0x48f build/default/debug/pmp.o
- .debug_info      0x00166f        0x988 build/default/debug/SSD1322_OLED.o
- .debug_info      0x001ff7        0x720 build/default/debug/Graphics_OLED.o
- .debug_info      0x002717        0xbad build/default/debug/Keyboard_Pad.o
- .debug_info      0x0032c4        0x93f build/default/debug/Keyboard_Nav.o
- .debug_info      0x003c03        0x1e5 build/default/debug/main.o
- .debug_info      0x003de8        0x218 build/default/debug/userFncFile.o
- .debug_info      0x004000        0x968 build/default/debug/streamIn.o
+ .debug_info      0x000000        0x4a3 build/default/production/timer.o
+ .debug_info      0x0004a3        0x1b7 build/default/production/systemTimer.o
+ .debug_info      0x00065a        0x514 build/default/production/led_Led1.o
+ .debug_info      0x000b6e        0x514 build/default/production/led_Led2.o
+ .debug_info      0x001082        0x15e build/default/production/timer_api1.o
+ .debug_info      0x0011e0        0x48f build/default/production/pmp.o
+ .debug_info      0x00166f        0x988 build/default/production/SSD1322_OLED.o
+ .debug_info      0x001ff7        0x720 build/default/production/Graphics_OLED.o
+ .debug_info      0x002717        0xbad build/default/production/Keyboard_Pad.o
+ .debug_info      0x0032c4        0x93f build/default/production/Keyboard_Nav.o
+ .debug_info      0x003c03        0x1e5 build/default/production/main.o
+ .debug_info      0x003de8        0x218 build/default/production/userFncFile.o
+ .debug_info      0x004000        0x968 build/default/production/streamIn.o
  .debug_info      0x004968         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_info      0x0049f5         0x8b c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  .debug_info      0x004a80         0x8c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
@@ -1080,19 +1039,19 @@ __CONFIG1
 
 .debug_abbrev     0x000000        0xd6d
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xe0 build/default/debug/timer.o
- .debug_abbrev    0x0000e0         0x7a build/default/debug/systemTimer.o
- .debug_abbrev    0x00015a         0xc6 build/default/debug/led_Led1.o
- .debug_abbrev    0x000220         0xc6 build/default/debug/led_Led2.o
- .debug_abbrev    0x0002e6         0x1f build/default/debug/timer_api1.o
- .debug_abbrev    0x000305        0x102 build/default/debug/pmp.o
- .debug_abbrev    0x000407         0xde build/default/debug/SSD1322_OLED.o
- .debug_abbrev    0x0004e5        0x13b build/default/debug/Graphics_OLED.o
- .debug_abbrev    0x000620        0x133 build/default/debug/Keyboard_Pad.o
- .debug_abbrev    0x000753        0x133 build/default/debug/Keyboard_Nav.o
- .debug_abbrev    0x000886         0x70 build/default/debug/main.o
- .debug_abbrev    0x0008f6         0x88 build/default/debug/userFncFile.o
- .debug_abbrev    0x00097e        0x133 build/default/debug/streamIn.o
+ .debug_abbrev    0x000000         0xe0 build/default/production/timer.o
+ .debug_abbrev    0x0000e0         0x7a build/default/production/systemTimer.o
+ .debug_abbrev    0x00015a         0xc6 build/default/production/led_Led1.o
+ .debug_abbrev    0x000220         0xc6 build/default/production/led_Led2.o
+ .debug_abbrev    0x0002e6         0x1f build/default/production/timer_api1.o
+ .debug_abbrev    0x000305        0x102 build/default/production/pmp.o
+ .debug_abbrev    0x000407         0xde build/default/production/SSD1322_OLED.o
+ .debug_abbrev    0x0004e5        0x13b build/default/production/Graphics_OLED.o
+ .debug_abbrev    0x000620        0x133 build/default/production/Keyboard_Pad.o
+ .debug_abbrev    0x000753        0x133 build/default/production/Keyboard_Nav.o
+ .debug_abbrev    0x000886         0x70 build/default/production/main.o
+ .debug_abbrev    0x0008f6         0x88 build/default/production/userFncFile.o
+ .debug_abbrev    0x00097e        0x133 build/default/production/streamIn.o
  .debug_abbrev    0x000ab1         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_abbrev    0x000ac5         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  .debug_abbrev    0x000ad9         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
@@ -1131,19 +1090,19 @@ __CONFIG1
 
 .debug_line       0x000000       0x1b0d
  *(.debug_line)
- .debug_line      0x000000        0x118 build/default/debug/timer.o
- .debug_line      0x000118         0x8f build/default/debug/systemTimer.o
- .debug_line      0x0001a7        0x10c build/default/debug/led_Led1.o
- .debug_line      0x0002b3        0x10c build/default/debug/led_Led2.o
- .debug_line      0x0003bf         0x1a build/default/debug/timer_api1.o
- .debug_line      0x0003d9         0xf9 build/default/debug/pmp.o
- .debug_line      0x0004d2        0x163 build/default/debug/SSD1322_OLED.o
- .debug_line      0x000635        0x15c build/default/debug/Graphics_OLED.o
- .debug_line      0x000791        0x154 build/default/debug/Keyboard_Pad.o
- .debug_line      0x0008e5        0x154 build/default/debug/Keyboard_Nav.o
- .debug_line      0x000a39        0x10c build/default/debug/main.o
- .debug_line      0x000b45         0x95 build/default/debug/userFncFile.o
- .debug_line      0x000bda        0x19b build/default/debug/streamIn.o
+ .debug_line      0x000000        0x118 build/default/production/timer.o
+ .debug_line      0x000118         0x8f build/default/production/systemTimer.o
+ .debug_line      0x0001a7        0x10c build/default/production/led_Led1.o
+ .debug_line      0x0002b3        0x10c build/default/production/led_Led2.o
+ .debug_line      0x0003bf         0x1a build/default/production/timer_api1.o
+ .debug_line      0x0003d9         0xf9 build/default/production/pmp.o
+ .debug_line      0x0004d2        0x163 build/default/production/SSD1322_OLED.o
+ .debug_line      0x000635        0x15c build/default/production/Graphics_OLED.o
+ .debug_line      0x000791        0x154 build/default/production/Keyboard_Pad.o
+ .debug_line      0x0008e5        0x154 build/default/production/Keyboard_Nav.o
+ .debug_line      0x000a39        0x10c build/default/production/main.o
+ .debug_line      0x000b45         0x95 build/default/production/userFncFile.o
+ .debug_line      0x000bda        0x19b build/default/production/streamIn.o
  .debug_line      0x000d75         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_line      0x000daf         0x38 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  .debug_line      0x000de7         0x43 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
@@ -1182,30 +1141,30 @@ __CONFIG1
 
 .debug_frame      0x000000        0x7da
  *(.debug_frame)
- .debug_frame     0x000000         0x74 build/default/debug/timer.o
- .debug_frame     0x000074         0x62 build/default/debug/systemTimer.o
- .debug_frame     0x0000d6         0x48 build/default/debug/led_Led1.o
- .debug_frame     0x00011e         0x48 build/default/debug/led_Led2.o
- .debug_frame     0x000166         0x7c build/default/debug/pmp.o
- .debug_frame     0x0001e2        0x118 build/default/debug/SSD1322_OLED.o
- .debug_frame     0x0002fa        0x134 build/default/debug/Graphics_OLED.o
- .debug_frame     0x00042e         0xb0 build/default/debug/Keyboard_Pad.o
- .debug_frame     0x0004de         0xb0 build/default/debug/Keyboard_Nav.o
- .debug_frame     0x00058e         0x48 build/default/debug/main.o
- .debug_frame     0x0005d6         0x78 build/default/debug/userFncFile.o
- .debug_frame     0x00064e        0x18c build/default/debug/streamIn.o
+ .debug_frame     0x000000         0x74 build/default/production/timer.o
+ .debug_frame     0x000074         0x62 build/default/production/systemTimer.o
+ .debug_frame     0x0000d6         0x48 build/default/production/led_Led1.o
+ .debug_frame     0x00011e         0x48 build/default/production/led_Led2.o
+ .debug_frame     0x000166         0x7c build/default/production/pmp.o
+ .debug_frame     0x0001e2        0x118 build/default/production/SSD1322_OLED.o
+ .debug_frame     0x0002fa        0x134 build/default/production/Graphics_OLED.o
+ .debug_frame     0x00042e         0xb0 build/default/production/Keyboard_Pad.o
+ .debug_frame     0x0004de         0xb0 build/default/production/Keyboard_Nav.o
+ .debug_frame     0x00058e         0x48 build/default/production/main.o
+ .debug_frame     0x0005d6         0x78 build/default/production/userFncFile.o
+ .debug_frame     0x00064e        0x18c build/default/production/streamIn.o
 
 .debug_str        0x000000        0x132
  *(.debug_str)
- .debug_str       0x000000         0x12 build/default/debug/timer.o
- .debug_str       0x000012         0x1d build/default/debug/led_Led1.o
- .debug_str       0x00002f         0x1d build/default/debug/led_Led2.o
- .debug_str       0x00004c          0xb build/default/debug/pmp.o
- .debug_str       0x000057         0x26 build/default/debug/SSD1322_OLED.o
- .debug_str       0x00007d         0x31 build/default/debug/Graphics_OLED.o
- .debug_str       0x0000ae         0x45 build/default/debug/Keyboard_Pad.o
- .debug_str       0x0000f3         0x31 build/default/debug/Keyboard_Nav.o
- .debug_str       0x000124          0xe build/default/debug/streamIn.o
+ .debug_str       0x000000         0x12 build/default/production/timer.o
+ .debug_str       0x000012         0x1d build/default/production/led_Led1.o
+ .debug_str       0x00002f         0x1d build/default/production/led_Led2.o
+ .debug_str       0x00004c          0xb build/default/production/pmp.o
+ .debug_str       0x000057         0x26 build/default/production/SSD1322_OLED.o
+ .debug_str       0x00007d         0x31 build/default/production/Graphics_OLED.o
+ .debug_str       0x0000ae         0x45 build/default/production/Keyboard_Pad.o
+ .debug_str       0x0000f3         0x31 build/default/production/Keyboard_Nav.o
+ .debug_str       0x000124          0xe build/default/production/streamIn.o
 
 .debug_loc
  *(.debug_loc)
@@ -1217,29 +1176,29 @@ __CONFIG1
                   0x000000        0x5d5
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x33 build/default/debug/timer.o
+                  0x000000         0x33 build/default/production/timer.o
  .debug_pubnames
-                  0x000033         0x45 build/default/debug/systemTimer.o
+                  0x000033         0x45 build/default/production/systemTimer.o
  .debug_pubnames
-                  0x000078         0x39 build/default/debug/led_Led1.o
+                  0x000078         0x39 build/default/production/led_Led1.o
  .debug_pubnames
-                  0x0000b1         0x39 build/default/debug/led_Led2.o
+                  0x0000b1         0x39 build/default/production/led_Led2.o
  .debug_pubnames
-                  0x0000ea         0x49 build/default/debug/pmp.o
+                  0x0000ea         0x49 build/default/production/pmp.o
  .debug_pubnames
-                  0x000133        0x112 build/default/debug/SSD1322_OLED.o
+                  0x000133        0x112 build/default/production/SSD1322_OLED.o
  .debug_pubnames
-                  0x000245         0xf2 build/default/debug/Graphics_OLED.o
+                  0x000245         0xf2 build/default/production/Graphics_OLED.o
  .debug_pubnames
-                  0x000337         0x57 build/default/debug/Keyboard_Pad.o
+                  0x000337         0x57 build/default/production/Keyboard_Pad.o
  .debug_pubnames
-                  0x00038e         0x57 build/default/debug/Keyboard_Nav.o
+                  0x00038e         0x57 build/default/production/Keyboard_Nav.o
  .debug_pubnames
-                  0x0003e5         0x2a build/default/debug/main.o
+                  0x0003e5         0x2a build/default/production/main.o
  .debug_pubnames
-                  0x00040f         0x5c build/default/debug/userFncFile.o
+                  0x00040f         0x5c build/default/production/userFncFile.o
  .debug_pubnames
-                  0x00046b        0x16a build/default/debug/streamIn.o
+                  0x00046b        0x16a build/default/production/streamIn.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1247,29 +1206,29 @@ __CONFIG1
 .debug_aranges    0x000000        0x468
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/debug/timer.o
+                  0x000000         0x18 build/default/production/timer.o
  .debug_aranges
-                  0x000018         0x18 build/default/debug/systemTimer.o
+                  0x000018         0x18 build/default/production/systemTimer.o
  .debug_aranges
-                  0x000030         0x18 build/default/debug/led_Led1.o
+                  0x000030         0x18 build/default/production/led_Led1.o
  .debug_aranges
-                  0x000048         0x18 build/default/debug/led_Led2.o
+                  0x000048         0x18 build/default/production/led_Led2.o
  .debug_aranges
-                  0x000060         0x18 build/default/debug/pmp.o
+                  0x000060         0x18 build/default/production/pmp.o
  .debug_aranges
-                  0x000078         0x18 build/default/debug/SSD1322_OLED.o
+                  0x000078         0x18 build/default/production/SSD1322_OLED.o
  .debug_aranges
-                  0x000090         0x18 build/default/debug/Graphics_OLED.o
+                  0x000090         0x18 build/default/production/Graphics_OLED.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/debug/Keyboard_Pad.o
+                  0x0000a8         0x18 build/default/production/Keyboard_Pad.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/debug/Keyboard_Nav.o
+                  0x0000c0         0x18 build/default/production/Keyboard_Nav.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/debug/main.o
+                  0x0000d8         0x18 build/default/production/main.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/debug/userFncFile.o
+                  0x0000f0         0x18 build/default/production/userFncFile.o
  .debug_aranges
-                  0x000108         0x18 build/default/debug/streamIn.o
+                  0x000108         0x18 build/default/production/streamIn.o
  .debug_aranges
                   0x000120         0x18 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
  .debug_aranges
@@ -1951,7 +1910,7 @@ LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a
 END GROUP
-OUTPUT(dist/default/debug/Panel3.debug.elf elf32-pic30)
+OUTPUT(dist/default/production/Panel3.production.elf elf32-pic30)
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
@@ -1959,60 +1918,60 @@ LOAD data_init
 .debug_pubtypes
                   0x000468        0x609
  .debug_pubtypes
-                  0x000468         0x6e build/default/debug/timer.o
+                  0x000468         0x6e build/default/production/timer.o
  .debug_pubtypes
-                  0x0004d6         0x1f build/default/debug/systemTimer.o
+                  0x0004d6         0x1f build/default/production/systemTimer.o
  .debug_pubtypes
-                  0x0004f5         0x86 build/default/debug/led_Led1.o
+                  0x0004f5         0x86 build/default/production/led_Led1.o
  .debug_pubtypes
-                  0x00057b         0x86 build/default/debug/led_Led2.o
+                  0x00057b         0x86 build/default/production/led_Led2.o
  .debug_pubtypes
-                  0x000601         0x12 build/default/debug/timer_api1.o
+                  0x000601         0x12 build/default/production/timer_api1.o
  .debug_pubtypes
-                  0x000613         0x4c build/default/debug/pmp.o
+                  0x000613         0x4c build/default/production/pmp.o
  .debug_pubtypes
-                  0x00065f         0xb0 build/default/debug/SSD1322_OLED.o
+                  0x00065f         0xb0 build/default/production/SSD1322_OLED.o
  .debug_pubtypes
-                  0x00070f         0x87 build/default/debug/Graphics_OLED.o
+                  0x00070f         0x87 build/default/production/Graphics_OLED.o
  .debug_pubtypes
-                  0x000796        0x10f build/default/debug/Keyboard_Pad.o
+                  0x000796        0x10f build/default/production/Keyboard_Pad.o
  .debug_pubtypes
-                  0x0008a5         0xd1 build/default/debug/Keyboard_Nav.o
+                  0x0008a5         0xd1 build/default/production/Keyboard_Nav.o
  .debug_pubtypes
-                  0x000976         0x1f build/default/debug/main.o
+                  0x000976         0x1f build/default/production/main.o
  .debug_pubtypes
-                  0x000995         0x1e build/default/debug/userFncFile.o
+                  0x000995         0x1e build/default/production/userFncFile.o
  .debug_pubtypes
-                  0x0009b3         0xbe build/default/debug/streamIn.o
+                  0x0009b3         0xbe build/default/production/streamIn.o
 
 __c30_signature
                   0x000a71        0x20a
  __c30_signature
-                  0x000a71          0x6 build/default/debug/timer.o
+                  0x000a71          0x6 build/default/production/timer.o
  __c30_signature
-                  0x000a77          0x6 build/default/debug/systemTimer.o
+                  0x000a77          0x6 build/default/production/systemTimer.o
  __c30_signature
-                  0x000a7d          0x6 build/default/debug/led_Led1.o
+                  0x000a7d          0x6 build/default/production/led_Led1.o
  __c30_signature
-                  0x000a83          0x6 build/default/debug/led_Led2.o
+                  0x000a83          0x6 build/default/production/led_Led2.o
  __c30_signature
-                  0x000a89          0x6 build/default/debug/timer_api1.o
+                  0x000a89          0x6 build/default/production/timer_api1.o
  __c30_signature
-                  0x000a8f          0x6 build/default/debug/pmp.o
+                  0x000a8f          0x6 build/default/production/pmp.o
  __c30_signature
-                  0x000a95          0x6 build/default/debug/SSD1322_OLED.o
+                  0x000a95          0x6 build/default/production/SSD1322_OLED.o
  __c30_signature
-                  0x000a9b          0x6 build/default/debug/Graphics_OLED.o
+                  0x000a9b          0x6 build/default/production/Graphics_OLED.o
  __c30_signature
-                  0x000aa1          0x6 build/default/debug/Keyboard_Pad.o
+                  0x000aa1          0x6 build/default/production/Keyboard_Pad.o
  __c30_signature
-                  0x000aa7          0x6 build/default/debug/Keyboard_Nav.o
+                  0x000aa7          0x6 build/default/production/Keyboard_Nav.o
  __c30_signature
-                  0x000aad          0x6 build/default/debug/main.o
+                  0x000aad          0x6 build/default/production/main.o
  __c30_signature
-                  0x000ab3          0x6 build/default/debug/userFncFile.o
+                  0x000ab3          0x6 build/default/production/userFncFile.o
  __c30_signature
-                  0x000ab9          0x6 build/default/debug/streamIn.o
+                  0x000ab9          0x6 build/default/production/streamIn.o
  __c30_signature
                   0x000abf          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -2171,61 +2130,61 @@ __xc_reference_data
                   0x00402c          0xe c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__io_fmt_needed.XX_lo)
                   0x00402c                  ___io_fmt_needed
 
-.nbss               0x0850         0x18
- .nbss              0x0850          0x6 build/default/debug/Graphics_OLED.o
- .nbss              0x0856          0x6 build/default/debug/Keyboard_Pad.o
- .nbss              0x085c          0x6 build/default/debug/Keyboard_Nav.o
- .nbss              0x0862          0x4 build/default/debug/systemTimer.o
- .nbss              0x0866          0x2 build/default/debug/timer.o
+.nbss               0x0800         0x18
+ .nbss              0x0800          0x6 build/default/production/Graphics_OLED.o
+ .nbss              0x0806          0x6 build/default/production/Keyboard_Pad.o
+ .nbss              0x080c          0x6 build/default/production/Keyboard_Nav.o
+ .nbss              0x0812          0x4 build/default/production/systemTimer.o
+ .nbss              0x0816          0x2 build/default/production/timer.o
 
-.ndata              0x0868          0x2
- .ndata             0x0868          0x2 build/default/debug/Graphics_OLED.o
+.ndata              0x0818          0x2
+ .ndata             0x0818          0x2 build/default/production/Graphics_OLED.o
 
-.bss                0x086a        0x400
- .bss               0x086a        0x400 build/default/debug/Graphics_OLED.o
-                    0x086a                  _Graphics_OLED_framebuffer
+.bss                0x081a        0x400
+ .bss               0x081a        0x400 build/default/production/Graphics_OLED.o
+                    0x081a                  _Graphics_OLED_framebuffer
 
-.data               0x0c6a         0x36
- .data              0x0c6a         0x36 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(floatscan.XX_o)
+.data               0x0c1a         0x36
+ .data              0x0c1a         0x36 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(floatscan.XX_o)
 
-.bss                0x0ca0         0x40
- .bss               0x0ca0         0x24 build/default/debug/Keyboard_Pad.o
- .bss               0x0cc4         0x1c build/default/debug/Keyboard_Nav.o
+.bss                0x0c50         0x40
+ .bss               0x0c50         0x24 build/default/production/Keyboard_Pad.o
+ .bss               0x0c74         0x1c build/default/production/Keyboard_Nav.o
 
-.data               0x0ce0         0x3c
- .data              0x0ce0         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
- .data              0x0cfc         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
- .data              0x0d0c         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
+.data               0x0c90         0x3c
+ .data              0x0c90         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
+ .data              0x0cac         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
+ .data              0x0cbc         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
 
-.bss                0x0d1c          0x8
- .bss               0x0d1c          0x4 build/default/debug/userFncFile.o
-                    0x0d1c                  _STR_KEY
- .bss               0x0d20          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__stdio_exit.XX_o)
-                    0x0d20                  ___stdin_used
-                    0x0d20                  ___stdout_used
-                    0x0d20                  ___stderr_used
- .bss               0x0d22          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_lo)
-                    0x0d22                  ___errno_val
+.bss                0x0ccc          0x8
+ .bss               0x0ccc          0x4 build/default/production/userFncFile.o
+                    0x0ccc                  _STR_KEY
+ .bss               0x0cd0          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__stdio_exit.XX_o)
+                    0x0cd0                  ___stdin_used
+                    0x0cd0                  ___stdout_used
+                    0x0cd0                  ___stderr_used
+ .bss               0x0cd2          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_lo)
+                    0x0cd2                  ___errno_val
 
 .ivt._T4Interrupt
                   0x00004a          0x2
  .ivt._T4Interrupt
-                  0x00004a          0x2 build/default/debug/timer.o
+                  0x00004a          0x2 build/default/production/timer.o
 
 .config_JTAGEN    0x00abfe          0x2
  .config_JTAGEN
-                  0x00abfe          0x2 build/default/debug/main.o
+                  0x00abfe          0x2 build/default/production/main.o
 
 .config_IESO      0x00abfc          0x2
- .config_IESO     0x00abfc          0x2 build/default/debug/main.o
+ .config_IESO     0x00abfc          0x2 build/default/production/main.o
 
 .const              0xc02a        0x806 load address 0x00402a  
- .const             0xc02a        0x7f0 build/default/debug/Graphics_OLED.o
+ .const             0xc02a        0x7f0 build/default/production/Graphics_OLED.o
                     0xc80a                  _streamOut_Graphic_OLED
- .const             0xc81a         0x16 build/default/debug/userFncFile.o
+ .const             0xc81a         0x16 build/default/production/userFncFile.o
 
 .text             0x004830       0x12a2
- .text            0x004830        0x72e build/default/debug/streamIn.o
+ .text            0x004830        0x72e build/default/production/streamIn.o
                   0x004830                  _streamIn_t_ptr_to_float
                   0x00487c                  _streamIn_t_ptr_to_char
                   0x0048c8                  _streamIn_t_ptr_to_uint8_t
@@ -2238,25 +2197,25 @@ __xc_reference_data
                   0x004ae0                  _streamIn_t_ptr_to_int64_t
                   0x004b2c                  _streamIn_t_ptr_to_ascii
                   0x004b82                  _sendDataToStream
- .text            0x004f5e        0x502 build/default/debug/Graphics_OLED.o
+ .text            0x004f5e        0x502 build/default/production/Graphics_OLED.o
                   0x004f5e                  _Graphics_OLED_init
                   0x004f98                  _Graphics_OLED_poll
                   0x004fa4                  _Graphics_OLED_clear
                   0x004fca                  _Graphics_OLED_pixel
                   0x005084                  _Graphics_OLED_line
-                  0x005240                  build/default/debug/Graphics_OLED.o:_putCharAvailable
-                  0x005248                  build/default/debug/Graphics_OLED.o:_putChar
+                  0x005240                  build/default/production/Graphics_OLED.o:_putCharAvailable
+                  0x005248                  build/default/production/Graphics_OLED.o:_putChar
                   0x005412                  _Graphics_OLED_print
                   0x005428                  _Graphics_OLED_printAt
- .text            0x005460        0x22e build/default/debug/Keyboard_Pad.o
+ .text            0x005460        0x22e build/default/production/Keyboard_Pad.o
                   0x0054f4                  _Keyboard_Pad_init
                   0x005542                  _Keyboard_Pad_setMode
                   0x005550                  _Keyboard_Pad_poll
- .text            0x00568e        0x22e build/default/debug/Keyboard_Nav.o
+ .text            0x00568e        0x22e build/default/production/Keyboard_Nav.o
                   0x005722                  _Keyboard_Nav_init
                   0x005770                  _Keyboard_Nav_setMode
                   0x00577e                  _Keyboard_Nav_poll
- .text            0x0058bc        0x216 build/default/debug/SSD1322_OLED.o
+ .text            0x0058bc        0x216 build/default/production/SSD1322_OLED.o
                   0x0058bc                  _SSD1322_OLED_sendCommand
                   0x0058cc                  _SSD1322_OLED_sendData
                   0x0058d8                  _SSD1322_OLED_setColumn
@@ -2272,25 +2231,25 @@ __xc_reference_data
  .dinit           0x005ad2         0xb4 data_init
 
 .text             0x005b86        0x140
- .text            0x005b86         0x44 build/default/debug/userFncFile.o
+ .text            0x005b86         0x44 build/default/production/userFncFile.o
                   0x005b86                  _onReset
                   0x005ba0                  _Keyboard_Nav_onPress
                   0x005bbe                  _Keyboard_Pad_onPress
- .text            0x005bca         0x3e build/default/debug/pmp.o
+ .text            0x005bca         0x3e build/default/production/pmp.o
                   0x005bca                  _PMP_init
                   0x005bda                  _PMP_write
                   0x005be6                  _PMP_read
                   0x005bfc                  _PMP_isBusy
- .text            0x005c08         0x38 build/default/debug/led_Led1.o
+ .text            0x005c08         0x38 build/default/production/led_Led1.o
                   0x005c08                  _LEDs_Led1_init
                   0x005c10                  _LEDs_Led1_state
- .text            0x005c40         0x38 build/default/debug/led_Led2.o
+ .text            0x005c40         0x38 build/default/production/led_Led2.o
                   0x005c40                  _LEDs_Led2_init
                   0x005c48                  _LEDs_Led2_state
- .text            0x005c78         0x28 build/default/debug/main.o
+ .text            0x005c78         0x28 build/default/production/main.o
                   0x005c78                  _initSystem
                   0x005c86                  _main
- .text            0x005ca0         0x26 build/default/debug/systemTimer.o
+ .text            0x005ca0         0x26 build/default/production/systemTimer.o
                   0x005ca0                  _getSystemMilis
                   0x005caa                  _callback
                   0x005cbc                  _systemTimeInit
@@ -2300,5 +2259,5 @@ __xc_reference_data
                   0x005cc6                  ___delay32
 
 .text             0x005ce2         0x16
- .text            0x005ce2         0x16 build/default/debug/timer.o
+ .text            0x005ce2         0x16 build/default/production/timer.o
                   0x005ce2                  _timer4_init
