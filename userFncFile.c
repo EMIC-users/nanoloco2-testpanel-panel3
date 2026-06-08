@@ -26,7 +26,7 @@ void onReset()
 void Keyboard_Nav_onPress(uint8_t key)
 {
     LEDs_Led1_state(2);
-    Graphics_OLED_printAt(0, 30, 0, "TECLA:%u ", key);
+    Graphics_OLED_printAt(0, 20, 0, "TECLA:%u ", key);
 }
 
 
