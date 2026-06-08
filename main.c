@@ -8,6 +8,7 @@
 #include "inc/Graphics_OLED.h"
 #include "inc/Keyboard_Pad.h"
 #include "inc/Keyboard_Nav.h"
+#include "inc/conversionFunctions.h"
 #include "inc/system.h"
 #include "inc/userFncFile.h"
 

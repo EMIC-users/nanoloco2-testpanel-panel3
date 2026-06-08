@@ -10,6 +10,7 @@
 #include "inc/Graphics_OLED.h"
 #include "inc/Keyboard_Pad.h"
 #include "inc/Keyboard_Nav.h"
+#include "inc/conversionFunctions.h"
 
 /* User Arrays */
 char STR_KEY[3];

@@ -102,6 +102,13 @@
 // o interfiere con el PMP). Re-habilitar y depurar en Etapa 4 (integracion).
 //EMIC:setInput(DEV:_api/Wired_Communication/EMICBus/EMICBus.emic,port=1,frameID=0)
 
+
+
+
+
+
+
+
 //-------------------- main  -----------------------
 
 
