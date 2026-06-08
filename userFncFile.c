@@ -20,13 +20,6 @@ void onReset()
     Graphics_OLED_clear();
     Graphics_OLED_printAt(0, 0, 1, "TECLA TEST");
     LEDs_Led1_state(0);
-    LEDs_Led2_state(0);
-}
-
-
-void Keyboard_Nav_onPress(uint8_t key)
-{
-    LEDs_Led2_state(2);
 }
 
 
@@ -34,6 +27,13 @@ void Keyboard_Nav_onPress(uint8_t key)
 {
     LEDs_Led1_state(2);
     Graphics_OLED_printAt(0, 20, 0, "TECLA:%u ", key);
+}
+
+
+void Keyboard_Pad_onPress(uint8_t key)
+{
+    LEDs_Led2_state(2);
+    Graphics_OLED_printAt(0, 40, 0, "TECLA:%u ", key);
 }
 
 
