@@ -3,6 +3,12 @@
 
 //------------------- Process EMIC-Generate files result ----------------
 
+// Functions:
+
+
+// Events:
+
+
 //------------------- APIs (basic skeleton) -----------------------
 
 // LEDs

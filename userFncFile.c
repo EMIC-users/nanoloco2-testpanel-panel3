@@ -24,17 +24,16 @@ void onReset()
 }
 
 
-void Keyboard_Pad_onPress(uint8_t key)
+void Keyboard_Nav_onPress(uint8_t key)
 {
-    LEDs_Led1_state(2);
-    uint8_t_to_ascii(key, STR_KEY, 3);
-    Graphics_OLED_printAt(0, 20, 1, STR_KEY);
+    LEDs_Led2_state(2);
 }
 
 
 void Keyboard_Nav_onPress(uint8_t key)
 {
-    LEDs_Led2_state(2);
+    LEDs_Led1_state(2);
+    Graphics_OLED_printAt(0, 20, 0, "TECLA:%u ", key);
 }
 
 

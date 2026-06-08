@@ -116,7 +116,6 @@ void Keyboard_Pad_poll(void)
                     if (pressed && !keyState[idx])
                     {
                         keyState[idx] = 1;
-                        Keyboard_Pad_onPress(idx);
                     }
                     else if (!pressed && keyState[idx])
                     {
