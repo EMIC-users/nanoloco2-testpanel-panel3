@@ -11,6 +11,10 @@
 #include "inc/Graphics_OLED.h"
 #include "inc/Keyboard_Pad.h"
 #include "inc/Keyboard_Nav.h"
+#include "inc/EMICBus.h"
+
+/* User Variables */
+char miVar;
 
 /* User Arrays */
 char STR_KEY[3];
@@ -20,6 +24,7 @@ void onReset()
     Graphics_OLED_clear();
     Graphics_OLED_printAt(0, 0, 1, "TECLA TEST");
     LEDs_Led1_state(0);
+    // Unsupported element: emic-user-function-call
 }
 
 
@@ -32,8 +37,12 @@ void Keyboard_Nav_onPress(uint8_t key)
 
 void Keyboard_Pad_onPress(uint8_t key)
 {
+    // Unsupported element: emic-user-function
     LEDs_Led2_state(2);
+    // Unsupported element: emic-user-function
+    // Unsupported element: emic-user-function-call
     Graphics_OLED_printAt(0, 30, 0, "TECLA:%u ", key);
+    // Unsupported element: emic-user-function
 }
 
 

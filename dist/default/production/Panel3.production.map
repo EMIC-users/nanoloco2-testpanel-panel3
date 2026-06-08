@@ -238,11 +238,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                      0x402a               0x806           0xc09  (3081)
 .text                       0x4830               0xfba          0x1797  (6039)
 .dinit                      0x57ea                0xb4           0x10e  (270)
-.text                       0x589e               0x140           0x1e0  (480)
-.init.delay32               0x59de                0x1c            0x2a  (42)
-.text                       0x59fa                0x16            0x21  (33)
+.text                       0x589e               0x152           0x1fb  (507)
+.init.delay32               0x59f0                0x1c            0x2a  (42)
+.text                       0x5a0c                0x16            0x21  (33)
 
-                 Total "program" memory used (bytes):         0x8418  (33816) 51%
+                 Total "program" memory used (bytes):         0x8433  (33843) 51%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -433,22 +433,22 @@ External Symbols in Program Memory (by address):
                   0x0056ee                  _Keyboard_Nav_poll
                   0x00589e                  _onReset
                   0x0058b8                  _Keyboard_Nav_onPress
-                  0x0058c4                  _Keyboard_Pad_onPress
-                  0x0058e2                  _PMP_init
-                  0x0058f2                  _PMP_write
-                  0x0058fe                  _PMP_read
-                  0x005914                  _PMP_isBusy
-                  0x005920                  _LEDs_Led1_init
-                  0x005928                  _LEDs_Led1_state
-                  0x005958                  _LEDs_Led2_init
-                  0x005960                  _LEDs_Led2_state
-                  0x005990                  _initSystem
-                  0x00599e                  _main
-                  0x0059b8                  _getSystemMilis
-                  0x0059c2                  _callback
-                  0x0059d4                  _systemTimeInit
-                  0x0059de                  ___delay32
-                  0x0059fa                  _timer4_init
+                  0x0058d6                  _Keyboard_Pad_onPress
+                  0x0058f4                  _PMP_init
+                  0x005904                  _PMP_write
+                  0x005910                  _PMP_read
+                  0x005926                  _PMP_isBusy
+                  0x005932                  _LEDs_Led1_init
+                  0x00593a                  _LEDs_Led1_state
+                  0x00596a                  _LEDs_Led2_init
+                  0x005972                  _LEDs_Led2_state
+                  0x0059a2                  _initSystem
+                  0x0059b0                  _main
+                  0x0059ca                  _getSystemMilis
+                  0x0059d4                  _callback
+                  0x0059e6                  _systemTimeInit
+                  0x0059f0                  ___delay32
+                  0x005a0c                  _timer4_init
 
 External Symbols in Program Memory (by name):
 
@@ -464,17 +464,17 @@ External Symbols in Program Memory (by name):
                   0x0056ee                  _Keyboard_Nav_poll
                   0x0056e0                  _Keyboard_Nav_setMode
                   0x0054b2                  _Keyboard_Pad_init
-                  0x0058c4                  _Keyboard_Pad_onPress
+                  0x0058d6                  _Keyboard_Pad_onPress
                   0x005508                  _Keyboard_Pad_poll
                   0x0054fa                  _Keyboard_Pad_setMode
-                  0x005920                  _LEDs_Led1_init
-                  0x005928                  _LEDs_Led1_state
-                  0x005958                  _LEDs_Led2_init
-                  0x005960                  _LEDs_Led2_state
-                  0x0058e2                  _PMP_init
-                  0x005914                  _PMP_isBusy
-                  0x0058fe                  _PMP_read
-                  0x0058f2                  _PMP_write
+                  0x005932                  _LEDs_Led1_init
+                  0x00593a                  _LEDs_Led1_state
+                  0x00596a                  _LEDs_Led2_init
+                  0x005972                  _LEDs_Led2_state
+                  0x0058f4                  _PMP_init
+                  0x005926                  _PMP_isBusy
+                  0x005910                  _PMP_read
+                  0x005904                  _PMP_write
                   0x00530e                  _SSD1322_OLED_clear
                   0x005266                  _SSD1322_OLED_init
                   0x005412                  _SSD1322_OLED_powerOff
@@ -489,7 +489,7 @@ External Symbols in Program Memory (by name):
                   0x0002d4                  __T4Interrupt
                   0x002f76                  ___adddf3
                   0x002998                  ___cvt_u
-                  0x0059de                  ___delay32
+                  0x0059f0                  ___delay32
                   0x00300c                  ___divdf3
                   0x0039b4                  ___divdi3
                   0x002dea                  ___divsi3
@@ -575,14 +575,14 @@ External Symbols in Program Memory (by name):
                   0x001c96                  _atoi
                   0x001cf6                  _atol
                   0x001d5c                  _atoll
-                  0x0059c2                  _callback
+                  0x0059d4                  _callback
                   0x003b06                  _copysignl
                   0x003b3a                  _fabsl
                   0x003b50                  _floorl
                   0x003c4a                  _fmodl
-                  0x0059b8                  _getSystemMilis
-                  0x005990                  _initSystem
-                  0x00599e                  _main
+                  0x0059ca                  _getSystemMilis
+                  0x0059a2                  _initSystem
+                  0x0059b0                  _main
                   0x00080e                  _memcpy
                   0x000302                  _memset
                   0x00589e                  _onReset
@@ -607,8 +607,8 @@ External Symbols in Program Memory (by name):
                   0x00087e                  _strtod
                   0x000878                  _strtof
                   0x000884                  _strtold
-                  0x0059d4                  _systemTimeInit
-                  0x0059fa                  _timer4_init
+                  0x0059e6                  _systemTimeInit
+                  0x005a0c                  _timer4_init
                   0x002c08                  _tolower
                   0x002d88                  _toupper
                   0x000424                  _vfprintf
@@ -2092,34 +2092,34 @@ __xc_reference_data
 .dinit            0x0057ea         0xb4
  .dinit           0x0057ea         0xb4 data_init
 
-.text             0x00589e        0x140
- .text            0x00589e         0x44 build/default/production/userFncFile.o
+.text             0x00589e        0x152
+ .text            0x00589e         0x56 build/default/production/userFncFile.o
                   0x00589e                  _onReset
                   0x0058b8                  _Keyboard_Nav_onPress
-                  0x0058c4                  _Keyboard_Pad_onPress
- .text            0x0058e2         0x3e build/default/production/pmp.o
-                  0x0058e2                  _PMP_init
-                  0x0058f2                  _PMP_write
-                  0x0058fe                  _PMP_read
-                  0x005914                  _PMP_isBusy
- .text            0x005920         0x38 build/default/production/led_Led1.o
-                  0x005920                  _LEDs_Led1_init
-                  0x005928                  _LEDs_Led1_state
- .text            0x005958         0x38 build/default/production/led_Led2.o
-                  0x005958                  _LEDs_Led2_init
-                  0x005960                  _LEDs_Led2_state
- .text            0x005990         0x28 build/default/production/main.o
-                  0x005990                  _initSystem
-                  0x00599e                  _main
- .text            0x0059b8         0x26 build/default/production/systemTimer.o
-                  0x0059b8                  _getSystemMilis
-                  0x0059c2                  _callback
-                  0x0059d4                  _systemTimeInit
+                  0x0058d6                  _Keyboard_Pad_onPress
+ .text            0x0058f4         0x3e build/default/production/pmp.o
+                  0x0058f4                  _PMP_init
+                  0x005904                  _PMP_write
+                  0x005910                  _PMP_read
+                  0x005926                  _PMP_isBusy
+ .text            0x005932         0x38 build/default/production/led_Led1.o
+                  0x005932                  _LEDs_Led1_init
+                  0x00593a                  _LEDs_Led1_state
+ .text            0x00596a         0x38 build/default/production/led_Led2.o
+                  0x00596a                  _LEDs_Led2_init
+                  0x005972                  _LEDs_Led2_state
+ .text            0x0059a2         0x28 build/default/production/main.o
+                  0x0059a2                  _initSystem
+                  0x0059b0                  _main
+ .text            0x0059ca         0x26 build/default/production/systemTimer.o
+                  0x0059ca                  _getSystemMilis
+                  0x0059d4                  _callback
+                  0x0059e6                  _systemTimeInit
 
-.init.delay32     0x0059de         0x1c
- .init.delay32    0x0059de         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                  0x0059de                  ___delay32
+.init.delay32     0x0059f0         0x1c
+ .init.delay32    0x0059f0         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
+                  0x0059f0                  ___delay32
 
-.text             0x0059fa         0x16
- .text            0x0059fa         0x16 build/default/production/timer.o
-                  0x0059fa                  _timer4_init
+.text             0x005a0c         0x16
+ .text            0x005a0c         0x16 build/default/production/timer.o
+                  0x005a0c                  _timer4_init

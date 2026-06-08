@@ -109,10 +109,29 @@
 
 
 
-// EMIC Bus (I2C communication)
-// DESHABILITADO (Etapa 2): EMICBus_init/poll rompe el display OLED (pisa pin/periferico
-// o interfiere con el PMP). Re-habilitar y depurar en Etapa 4 (integracion).
-//EMIC:setInput(DEV:_api/Wired_Communication/EMICBus/EMICBus.emic,port=1,frameID=0)
+// EMIC Bus (I2C communication) — I2C2 en el HW real (SCL2=RB3 pin24, SDA2=RB2 pin23).
+// CAUSA RAIZ del bug de Etapa 2: con port=1 (I2C1), I2CEN=1 toma SCL1/SDA1 = RB8/RB9,
+// que en esta placa son PMD4/PMD3 del bus PMP del display -> corrompia el OLED.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -24,6 +24,10 @@
       <itemPath>Graphics_OLED.c</itemPath>
       <itemPath>Keyboard_Pad.c</itemPath>
       <itemPath>Keyboard_Nav.c</itemPath>
+      <itemPath>stream.c</itemPath>
+      <itemPath>I2C2.c</itemPath>
+      <itemPath>I2C2_driver.c</itemPath>
+      <itemPath>EMICBus.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>userFncFile.c</itemPath>
     </logicalFolder>

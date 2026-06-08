@@ -75,13 +75,13 @@
 #define CN_OLED_RST                     17
 
 // Keyboard 3x4 (3 columns, 4 rows)
-#define TRIS_KBD1_COL0	_TRISA1
-#define LAT_KBD1_COL0 	_LATA1
-#define ODC_KBD1_COL0	_ODA1
-#define PIN_KBD1_COL0 	_RA1
-#define CN_KBD1_COL0		3
-#define ADC_value_KBD1_COL0              Buffer_entradas[1] 
-#define HAL_SetAnalog_KBD1_COL0()        {_PCFG1=0;\
+#define TRIS_KBD1_COL2	_TRISA1
+#define LAT_KBD1_COL2 	_LATA1
+#define ODC_KBD1_COL2	_ODA1
+#define PIN_KBD1_COL2 	_RA1
+#define CN_KBD1_COL2		3
+#define ADC_value_KBD1_COL2              Buffer_entradas[1] 
+#define HAL_SetAnalog_KBD1_COL2()        {_PCFG1=0;\
                                         adc_addAnalogChannel(1);}
 
 #define TRIS_KBD1_COL1	                _TRISA0
@@ -95,13 +95,13 @@
                                         adc_addAnalogChannel(0);}
 
 
-#define TRIS_KBD1_COL2                   _TRISC3
-#define PIN_KBD1_COL2                    _RC3
-#define LAT_KBD1_COL2                    _LATC3
-#define ODC_KBD1_COL2                    _ODC3
-#define RPOUT_KBD1_COL2                  RPOR9bits.RP19R
-#define RPIN_KBD1_COL2                   19
-#define CN_KBD1_COL2                     28
+#define TRIS_KBD1_COL0                   _TRISC3
+#define PIN_KBD1_COL0                    _RC3
+#define LAT_KBD1_COL0                    _LATC3
+#define ODC_KBD1_COL0                    _ODC3
+#define RPOUT_KBD1_COL0                  RPOR9bits.RP19R
+#define RPIN_KBD1_COL0                   19
+#define CN_KBD1_COL0                     28
 #define TRIS_KBD1_ROW0                   _TRISA7
 #define PIN_KBD1_ROW0                    _RA7
 #define LAT_KBD1_ROW0                    _LATA7

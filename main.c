@@ -9,6 +9,7 @@
 #include "inc/Graphics_OLED.h"
 #include "inc/Keyboard_Pad.h"
 #include "inc/Keyboard_Nav.h"
+#include "inc/EMICBus.h"
 #include "inc/system.h"
 #include "inc/userFncFile.h"
 
@@ -23,12 +24,14 @@ int main(void)
 	Graphics_OLED_init();
 	Keyboard_Pad_init();
 	Keyboard_Nav_init();
+	EMICBus_init();
 	onReset();
 	do
 	{
 		Graphics_OLED_poll();
 		Keyboard_Pad_poll();
 		Keyboard_Nav_poll();
+		poll_EMICBus();
 	}
 	while(1);
 }

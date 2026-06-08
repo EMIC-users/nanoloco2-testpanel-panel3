@@ -14,7 +14,8 @@ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\buil
  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/pins.h \
  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/pmp.h \
  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Pad.h \
- C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Nav.h
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Nav.h \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/EMICBus.h
 
 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/userFncFile.h:
 
@@ -45,3 +46,5 @@ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/
 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Pad.h:
 
 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Nav.h:
+
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/EMICBus.h:
