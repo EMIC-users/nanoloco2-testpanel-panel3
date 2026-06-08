@@ -150,7 +150,7 @@ void Graphics_OLED_print(char* format, ...)
 
 }
 
-void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId,char* format, ...)
+void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId, char* format, ...)
 {
     setFont(fontId);
     cursorX = x;
