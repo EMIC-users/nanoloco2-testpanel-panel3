@@ -85,13 +85,13 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0xfa           0x177  (375)
 .const                       0x2fa               0x7f8           0xbf4  (3060)
-.text                        0xaf2               0xbe0          0x11d0  (4560)
-.dinit                      0x16d2                0x3a            0x57  (87)
-.text                       0x170c                0xbe           0x11d  (285)
-.init.delay32               0x17ca                0x1c            0x2a  (42)
-.text                       0x17e6                0x16            0x21  (33)
+.text                        0xaf2               0xba8          0x117c  (4476)
+.dinit                      0x169a                0x40            0x60  (96)
+.text                       0x16da                0xfc           0x17a  (378)
+.init.delay32               0x17d6                0x1c            0x2a  (42)
+.text                       0x17f2                0x16            0x21  (33)
 
-                 Total "program" memory used (bytes):         0x20fa  (8442) 12%
+                 Total "program" memory used (bytes):         0x210c  (8460) 12%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -100,9 +100,9 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x18  (24)
 .ndata                       0x818                   0             0x2  (2)
-.bss                         0x81a                   0           0x440  (1088)
+.bss                         0x81a                   0           0x444  (1092)
 
-                 Total "data" memory used (bytes):          0x45a  (1114) 13%
+                 Total "data" memory used (bytes):          0x45e  (1118) 13%
 
 
 Dynamic Memory Usage
@@ -110,9 +110,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xc5a                              0x1ba6  (7078)
+stack                        0xc5e                              0x1ba2  (7074)
 
-                 Maximum dynamic memory (bytes):         0x1ba6  (7078)
+                 Maximum dynamic memory (bytes):         0x1ba2  (7074)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -120,10 +120,12 @@ Info: Project is using a large data memory model when small data memory model is
 External Symbols in Data Memory (by address):
 
                     0x081a                  _Graphics_OLED_framebuffer
+                    0x0c5a                  _STR_KEY
 
 External Symbols in Data Memory (by name):
 
                     0x081a                  _Graphics_OLED_framebuffer
+                    0x0c5a                  _STR_KEY
 
 External Symbols in Program Memory (by address):
 
@@ -156,24 +158,24 @@ External Symbols in Program Memory (by address):
                   0x00162e                  _SSD1322_OLED_setContrast
                   0x00163e                  _SSD1322_OLED_powerOn
                   0x00164a                  _SSD1322_OLED_powerOff
-                  0x001656                  _PMP_init
-                  0x001666                  _PMP_write
-                  0x001672                  _PMP_read
-                  0x001688                  _PMP_isBusy
-                  0x001694                  _onReset
-                  0x0016ae                  _Keyboard_Pad_onPress
-                  0x0016c6                  _Keyboard_Nav_onPress
-                  0x00170c                  _LEDs_Led1_init
-                  0x001714                  _LEDs_Led1_state
-                  0x001744                  _LEDs_Led2_init
-                  0x00174c                  _LEDs_Led2_state
-                  0x00177c                  _initSystem
-                  0x00178a                  _main
-                  0x0017a4                  _getSystemMilis
-                  0x0017ae                  _callback
-                  0x0017c0                  _systemTimeInit
-                  0x0017ca                  ___delay32
-                  0x0017e6                  _timer4_init
+                  0x001656                  _onReset
+                  0x001670                  _Keyboard_Pad_onPress
+                  0x00168e                  _Keyboard_Nav_onPress
+                  0x0016da                  _PMP_init
+                  0x0016ea                  _PMP_write
+                  0x0016f6                  _PMP_read
+                  0x00170c                  _PMP_isBusy
+                  0x001718                  _LEDs_Led1_init
+                  0x001720                  _LEDs_Led1_state
+                  0x001750                  _LEDs_Led2_init
+                  0x001758                  _LEDs_Led2_state
+                  0x001788                  _initSystem
+                  0x001796                  _main
+                  0x0017b0                  _getSystemMilis
+                  0x0017ba                  _callback
+                  0x0017cc                  _systemTimeInit
+                  0x0017d6                  ___delay32
+                  0x0017f2                  _timer4_init
 
 External Symbols in Program Memory (by name):
 
@@ -185,21 +187,21 @@ External Symbols in Program Memory (by name):
                   0x000f9e                  _Graphics_OLED_print
                   0x000fb8                  _Graphics_OLED_printAt
                   0x0012a6                  _Keyboard_Nav_init
-                  0x0016c6                  _Keyboard_Nav_onPress
+                  0x00168e                  _Keyboard_Nav_onPress
                   0x001302                  _Keyboard_Nav_poll
                   0x0012f4                  _Keyboard_Nav_setMode
                   0x001078                  _Keyboard_Pad_init
-                  0x0016ae                  _Keyboard_Pad_onPress
+                  0x001670                  _Keyboard_Pad_onPress
                   0x0010d4                  _Keyboard_Pad_poll
                   0x0010c6                  _Keyboard_Pad_setMode
-                  0x00170c                  _LEDs_Led1_init
-                  0x001714                  _LEDs_Led1_state
-                  0x001744                  _LEDs_Led2_init
-                  0x00174c                  _LEDs_Led2_state
-                  0x001656                  _PMP_init
-                  0x001688                  _PMP_isBusy
-                  0x001672                  _PMP_read
-                  0x001666                  _PMP_write
+                  0x001718                  _LEDs_Led1_init
+                  0x001720                  _LEDs_Led1_state
+                  0x001750                  _LEDs_Led2_init
+                  0x001758                  _LEDs_Led2_state
+                  0x0016da                  _PMP_init
+                  0x00170c                  _PMP_isBusy
+                  0x0016f6                  _PMP_read
+                  0x0016ea                  _PMP_write
                   0x001538                  _SSD1322_OLED_clear
                   0x001490                  _SSD1322_OLED_init
                   0x00164a                  _SSD1322_OLED_powerOff
@@ -212,18 +214,18 @@ External Symbols in Program Memory (by name):
                   0x001476                  _SSD1322_OLED_setRow
                   0x0002f4                  __DefaultInterrupt
                   0x0002cc                  __T4Interrupt
-                  0x0017ca                  ___delay32
+                  0x0017d6                  ___delay32
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0017ae                  _callback
-                  0x0017a4                  _getSystemMilis
-                  0x00177c                  _initSystem
-                  0x00178a                  _main
-                  0x001694                  _onReset
-                  0x0017c0                  _systemTimeInit
-                  0x0017e6                  _timer4_init
+                  0x0017ba                  _callback
+                  0x0017b0                  _getSystemMilis
+                  0x001788                  _initSystem
+                  0x001796                  _main
+                  0x001656                  _onReset
+                  0x0017cc                  _systemTimeInit
+                  0x0017f2                  _timer4_init
 
 Memory Configuration
 
@@ -310,7 +312,7 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3edf
+.debug_info       0x000000       0x3f36
  *(.debug_info)
  .debug_info      0x000000        0x4a3 build/default/debug/timer.o
  .debug_info      0x0004a3        0x1b7 build/default/debug/systemTimer.o
@@ -323,10 +325,10 @@ __CONFIG1
  .debug_info      0x002620        0xbad build/default/debug/Keyboard_Pad.o
  .debug_info      0x0031cd        0x93f build/default/debug/Keyboard_Nav.o
  .debug_info      0x003b0c        0x1e5 build/default/debug/main.o
- .debug_info      0x003cf1        0x1ee build/default/debug/userFncFile.o
+ .debug_info      0x003cf1        0x245 build/default/debug/userFncFile.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x916
+.debug_abbrev     0x000000        0x94b
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xe0 build/default/debug/timer.o
  .debug_abbrev    0x0000e0         0x7a build/default/debug/systemTimer.o
@@ -339,9 +341,9 @@ __CONFIG1
  .debug_abbrev    0x0005c6        0x133 build/default/debug/Keyboard_Pad.o
  .debug_abbrev    0x0006f9        0x133 build/default/debug/Keyboard_Nav.o
  .debug_abbrev    0x00082c         0x70 build/default/debug/main.o
- .debug_abbrev    0x00089c         0x7a build/default/debug/userFncFile.o
+ .debug_abbrev    0x00089c         0xaf build/default/debug/userFncFile.o
 
-.debug_line       0x000000        0xbc9
+.debug_line       0x000000        0xbca
  *(.debug_line)
  .debug_line      0x000000        0x118 build/default/debug/timer.o
  .debug_line      0x000118         0x8f build/default/debug/systemTimer.o
@@ -354,7 +356,7 @@ __CONFIG1
  .debug_line      0x000780        0x154 build/default/debug/Keyboard_Pad.o
  .debug_line      0x0008d4        0x154 build/default/debug/Keyboard_Nav.o
  .debug_line      0x000a28        0x10c build/default/debug/main.o
- .debug_line      0x000b34         0x95 build/default/debug/userFncFile.o
+ .debug_line      0x000b34         0x96 build/default/debug/userFncFile.o
 
 .debug_frame      0x000000        0x61e
  *(.debug_frame)
@@ -388,7 +390,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x444
+                  0x000000        0x450
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x33 build/default/debug/timer.o
@@ -411,7 +413,7 @@ __CONFIG1
  .debug_pubnames
                   0x0003ca         0x2a build/default/debug/main.o
  .debug_pubnames
-                  0x0003f4         0x50 build/default/debug/userFncFile.o
+                  0x0003f4         0x5c build/default/debug/userFncFile.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1126,11 +1128,13 @@ __c30_signature
 .ndata              0x0818          0x2
  .ndata             0x0818          0x2 build/default/debug/Graphics_OLED.o
 
-.bss                0x081a        0x440
+.bss                0x081a        0x444
  .bss               0x081a        0x400 build/default/debug/Graphics_OLED.o
                     0x081a                  _Graphics_OLED_framebuffer
  .bss               0x0c1a         0x24 build/default/debug/Keyboard_Pad.o
  .bss               0x0c3e         0x1c build/default/debug/Keyboard_Nav.o
+ .bss               0x0c5a          0x4 build/default/debug/userFncFile.o
+                    0x0c5a                  _STR_KEY
 
 .ivt._T4Interrupt
                   0x00004a          0x2
@@ -1148,7 +1152,7 @@ __c30_signature
  .const             0x82fa        0x7ec build/default/debug/Graphics_OLED.o
  .const             0x8ae6          0xc build/default/debug/userFncFile.o
 
-.text             0x000af2        0xbe0
+.text             0x000af2        0xba8
  .text            0x000af2        0x4f2 build/default/debug/Graphics_OLED.o
                   0x000af2                  _Graphics_OLED_init
                   0x000b2c                  _Graphics_OLED_poll
@@ -1176,38 +1180,38 @@ __c30_signature
                   0x00162e                  _SSD1322_OLED_setContrast
                   0x00163e                  _SSD1322_OLED_powerOn
                   0x00164a                  _SSD1322_OLED_powerOff
- .text            0x001656         0x3e build/default/debug/pmp.o
-                  0x001656                  _PMP_init
-                  0x001666                  _PMP_write
-                  0x001672                  _PMP_read
-                  0x001688                  _PMP_isBusy
- .text            0x001694         0x3e build/default/debug/userFncFile.o
-                  0x001694                  _onReset
-                  0x0016ae                  _Keyboard_Pad_onPress
-                  0x0016c6                  _Keyboard_Nav_onPress
+ .text            0x001656         0x44 build/default/debug/userFncFile.o
+                  0x001656                  _onReset
+                  0x001670                  _Keyboard_Pad_onPress
+                  0x00168e                  _Keyboard_Nav_onPress
 
-.dinit            0x0016d2         0x3a
- .dinit           0x0016d2         0x3a data_init
+.dinit            0x00169a         0x40
+ .dinit           0x00169a         0x40 data_init
 
-.text             0x00170c         0xbe
- .text            0x00170c         0x38 build/default/debug/led_Led1.o
-                  0x00170c                  _LEDs_Led1_init
-                  0x001714                  _LEDs_Led1_state
- .text            0x001744         0x38 build/default/debug/led_Led2.o
-                  0x001744                  _LEDs_Led2_init
-                  0x00174c                  _LEDs_Led2_state
- .text            0x00177c         0x28 build/default/debug/main.o
-                  0x00177c                  _initSystem
-                  0x00178a                  _main
- .text            0x0017a4         0x26 build/default/debug/systemTimer.o
-                  0x0017a4                  _getSystemMilis
-                  0x0017ae                  _callback
-                  0x0017c0                  _systemTimeInit
+.text             0x0016da         0xfc
+ .text            0x0016da         0x3e build/default/debug/pmp.o
+                  0x0016da                  _PMP_init
+                  0x0016ea                  _PMP_write
+                  0x0016f6                  _PMP_read
+                  0x00170c                  _PMP_isBusy
+ .text            0x001718         0x38 build/default/debug/led_Led1.o
+                  0x001718                  _LEDs_Led1_init
+                  0x001720                  _LEDs_Led1_state
+ .text            0x001750         0x38 build/default/debug/led_Led2.o
+                  0x001750                  _LEDs_Led2_init
+                  0x001758                  _LEDs_Led2_state
+ .text            0x001788         0x28 build/default/debug/main.o
+                  0x001788                  _initSystem
+                  0x001796                  _main
+ .text            0x0017b0         0x26 build/default/debug/systemTimer.o
+                  0x0017b0                  _getSystemMilis
+                  0x0017ba                  _callback
+                  0x0017cc                  _systemTimeInit
 
-.init.delay32     0x0017ca         0x1c
- .init.delay32    0x0017ca         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                  0x0017ca                  ___delay32
+.init.delay32     0x0017d6         0x1c
+ .init.delay32    0x0017d6         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
+                  0x0017d6                  ___delay32
 
-.text             0x0017e6         0x16
- .text            0x0017e6         0x16 build/default/debug/timer.o
-                  0x0017e6                  _timer4_init
+.text             0x0017f2         0x16
+ .text            0x0017f2         0x16 build/default/debug/timer.o
+                  0x0017f2                  _timer4_init
