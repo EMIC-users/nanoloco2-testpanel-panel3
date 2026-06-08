@@ -1,12 +1,17 @@
-build/default/production/Keyboard_Pad.o: Keyboard_Pad.c \
- inc/Keyboard_Pad.h inc/gpio.h inc/pins.h inc/systemTimer.h inc/system.h
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o: \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/Keyboard_Pad.c \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Pad.h \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/gpio.h \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/pins.h \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/systemTimer.h \
+ C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/system.h
 
-inc/Keyboard_Pad.h:
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/Keyboard_Pad.h:
 
-inc/gpio.h:
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/gpio.h:
 
-inc/pins.h:
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/pins.h:
 
-inc/systemTimer.h:
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/systemTimer.h:
 
-inc/system.h:
+C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3/inc/system.h:

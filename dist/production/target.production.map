@@ -434,7 +434,7 @@ External Symbols in Program Memory (by address):
                   0x005772                  _Keyboard_Nav_poll
                   0x005922                  _onReset
                   0x00593c                  _Keyboard_Nav_onPress
-                  0x00595a                  _Keyboard_Pad_onPress
+                  0x005948                  _Keyboard_Pad_onPress
                   0x005966                  _PMP_init
                   0x005976                  _PMP_write
                   0x005982                  _PMP_read
@@ -467,7 +467,7 @@ External Symbols in Program Memory (by name):
                   0x005772                  _Keyboard_Nav_poll
                   0x005764                  _Keyboard_Nav_setMode
                   0x005536                  _Keyboard_Pad_init
-                  0x00595a                  _Keyboard_Pad_onPress
+                  0x005948                  _Keyboard_Pad_onPress
                   0x00558c                  _Keyboard_Pad_poll
                   0x00557e                  _Keyboard_Pad_setMode
                   0x0059a4                  _LEDs_Led1_init
@@ -2095,7 +2095,7 @@ __xc_reference_data
  .text            0x005922         0x44 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
                   0x005922                  _onReset
                   0x00593c                  _Keyboard_Nav_onPress
-                  0x00595a                  _Keyboard_Pad_onPress
+                  0x005948                  _Keyboard_Pad_onPress
  .text            0x005966         0x3e C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\pmp.o
                   0x005966                  _PMP_init
                   0x005976                  _PMP_write
