@@ -142,14 +142,9 @@ void Graphics_OLED_print(char* format, ...)
 	va_list arg;
     va_start(arg, format);
 
-
+	sendDataToStream(&streamOut_Graphic_OLED,format,arg);
 	va_end(arg);
 
-    while (*text)
-    {
-        putChar(*text);
-        text++;
-    }
 }
 
 void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId,char* format, ...)
@@ -161,6 +156,7 @@ void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId,char* format, ..
     va_list arg;
     va_start(arg, format);
 
+	sendDataToStream(&streamOut_Graphic_OLED,format,arg);
 
 	va_end(arg);
 }
