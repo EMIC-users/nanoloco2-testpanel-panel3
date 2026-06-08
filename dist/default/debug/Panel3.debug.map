@@ -4,6 +4,11 @@ Tool Name:
   c:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
 
 Command:
+  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp00000e48.00 \
+  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp00000e48.01 \
+  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp00000e48.02 \
+  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp00000e48.03 \
+  -TC:\\Users\\RFI1\\AppData\\Local\\Temp\\tmp00000e48.04 \
   -p24FJ64GA004 \
   --mdfp=C:/Users/RFI1/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16 \
   -o \
@@ -39,7 +44,8 @@ Command:
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
   --defsym=__DEBUG=1 \
-  -Tp24FJ64GA004.gld.00 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
+  -Tp24FJ64GA004.gld.05 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -98,11 +104,16 @@ section                    address   length (PC units)   length (bytes) (dec)
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x18  (24)
-.ndata                       0x818                   0             0x2  (2)
-.bss                         0x81a                   0           0x444  (1092)
+reserve_data_0x800           0x800                0x20            0x20  (32)
+reserve_data_0x820           0x820                 0x2             0x2  (2)
+reserve_data_0x822           0x822                 0x2             0x2  (2)
+reserve_data_0x824           0x824                 0x2             0x2  (2)
+reserve_data_0x826           0x826                0x2a            0x2a  (42)
+.nbss                        0x850                   0            0x18  (24)
+.ndata                       0x868                   0             0x2  (2)
+.bss                         0x86a                   0           0x444  (1092)
 
-                 Total "data" memory used (bytes):          0x45e  (1118) 13%
+                 Total "data" memory used (bytes):          0x4ae  (1198) 14%
 
 
 Dynamic Memory Usage
@@ -110,22 +121,22 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xc5e                              0x1ba2  (7074)
+stack                        0xcae                              0x1b52  (6994)
 
-                 Maximum dynamic memory (bytes):         0x1ba2  (7074)
+                 Maximum dynamic memory (bytes):         0x1b52  (6994)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
 
 External Symbols in Data Memory (by address):
 
-                    0x081a                  _Graphics_OLED_framebuffer
-                    0x0c5a                  _STR_KEY
+                    0x086a                  _Graphics_OLED_framebuffer
+                    0x0caa                  _STR_KEY
 
 External Symbols in Data Memory (by name):
 
-                    0x081a                  _Graphics_OLED_framebuffer
-                    0x0c5a                  _STR_KEY
+                    0x086a                  _Graphics_OLED_framebuffer
+                    0x0caa                  _STR_KEY
 
 External Symbols in Program Memory (by address):
 
@@ -248,6 +259,31 @@ CONFIG1          0x00abfe           0x000002
 
 Linker script and memory map
 
+
+reserve_data_0x800
+                    0x0800         0x20
+                    0x0820                  . = 0x20
+ *fill*             0x0800         0x2000
+
+reserve_data_0x820
+                    0x0820          0x2
+                    0x0822                  . = 0x2
+ *fill*             0x0820          0x200
+
+reserve_data_0x822
+                    0x0822          0x2
+                    0x0824                  . = 0x2
+ *fill*             0x0822          0x200
+
+reserve_data_0x824
+                    0x0824          0x2
+                    0x0826                  . = 0x2
+ *fill*             0x0824          0x200
+
+reserve_data_0x826
+                    0x0826         0x2a
+                    0x0850                  . = 0x2a
+ *fill*             0x0826         0x2a00
 LOAD build/default/debug/timer.o
 LOAD build/default/debug/systemTimer.o
 LOAD build/default/debug/led_Led1.o
@@ -263,6 +299,7 @@ LOAD build/default/debug/userFncFile.o
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib/PIC24F\libpPIC24Fxxx-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
@@ -1124,23 +1161,23 @@ __c30_signature
  __c30_signature
                   0x0006a7          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
 
-.nbss               0x0800         0x18
- .nbss              0x0800          0x6 build/default/debug/Graphics_OLED.o
- .nbss              0x0806          0x6 build/default/debug/Keyboard_Pad.o
- .nbss              0x080c          0x6 build/default/debug/Keyboard_Nav.o
- .nbss              0x0812          0x4 build/default/debug/systemTimer.o
- .nbss              0x0816          0x2 build/default/debug/timer.o
+.nbss               0x0850         0x18
+ .nbss              0x0850          0x6 build/default/debug/Graphics_OLED.o
+ .nbss              0x0856          0x6 build/default/debug/Keyboard_Pad.o
+ .nbss              0x085c          0x6 build/default/debug/Keyboard_Nav.o
+ .nbss              0x0862          0x4 build/default/debug/systemTimer.o
+ .nbss              0x0866          0x2 build/default/debug/timer.o
 
-.ndata              0x0818          0x2
- .ndata             0x0818          0x2 build/default/debug/Graphics_OLED.o
+.ndata              0x0868          0x2
+ .ndata             0x0868          0x2 build/default/debug/Graphics_OLED.o
 
-.bss                0x081a        0x444
- .bss               0x081a        0x400 build/default/debug/Graphics_OLED.o
-                    0x081a                  _Graphics_OLED_framebuffer
- .bss               0x0c1a         0x24 build/default/debug/Keyboard_Pad.o
- .bss               0x0c3e         0x1c build/default/debug/Keyboard_Nav.o
- .bss               0x0c5a          0x4 build/default/debug/userFncFile.o
-                    0x0c5a                  _STR_KEY
+.bss                0x086a        0x444
+ .bss               0x086a        0x400 build/default/debug/Graphics_OLED.o
+                    0x086a                  _Graphics_OLED_framebuffer
+ .bss               0x0c6a         0x24 build/default/debug/Keyboard_Pad.o
+ .bss               0x0c8e         0x1c build/default/debug/Keyboard_Nav.o
+ .bss               0x0caa          0x4 build/default/debug/userFncFile.o
+                    0x0caa                  _STR_KEY
 
 .ivt._T4Interrupt
                   0x00004a          0x2
