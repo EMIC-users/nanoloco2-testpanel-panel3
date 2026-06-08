@@ -99,6 +99,11 @@ static void setFont(uint8_t fontId)
     fontHeight = fontHeights[fontId];
 }
 
+static uint16_t putCharAvsilable()
+{
+    return 1;
+}
+
 static void putChar(char c)
 {
     uint8_t col, row;
@@ -131,8 +136,14 @@ static void putChar(char c)
     cursorX += fontWidth + 1;
 }
 
-void Graphics_OLED_print(char* text)
+void Graphics_OLED_print(char* format, ...)
 {
+	va_list arg;
+    va_start(arg, format);
+
+
+	va_end(arg);
+
     while (*text)
     {
         putChar(*text);
@@ -140,12 +151,17 @@ void Graphics_OLED_print(char* text)
     }
 }
 
-void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId, char* text)
+void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId,char* format, ...)
 {
     setFont(fontId);
     cursorX = x;
     cursorY = y;
-    Graphics_OLED_print(text);
+    
+    va_list arg;
+    va_start(arg, format);
+
+
+	va_end(arg);
 }
 
 /*==================[end of file]============================================*/

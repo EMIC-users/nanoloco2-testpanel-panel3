@@ -6,6 +6,7 @@
 
 #include <stdint.h>
 #include "SSD1322_OLED.h"
+#include "streamOut.h"
 
 /*==================[macros]=================================================*/
 
@@ -19,7 +20,7 @@
 /*==================[external data declaration]==============================*/
 
 extern uint64_t Graphics_OLED_framebuffer[GFX_OLED_WIDTH];
-
+extern const streamOut_t streamOut_Graphic_OLED;
 /*==================[init/poll]==============================================*/
 
 void Graphics_OLED_init(void);
