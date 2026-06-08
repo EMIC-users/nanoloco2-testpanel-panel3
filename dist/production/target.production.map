@@ -80,15 +80,15 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200                0xfa           0x177  (375)
-.const                       0x2fa               0x7f8           0xbf4  (3060)
-.text                        0xaf2               0xa54           0xf7e  (3966)
-.dinit                      0x1546                0x3a            0x57  (87)
-.text                       0x1580                0xf0           0x168  (360)
-.init.delay32               0x1670                0x1c            0x2a  (42)
-.text                       0x168c                0x16            0x21  (33)
+.text                        0x200               0x102           0x183  (387)
+.const                       0x302               0x806           0xc09  (3081)
+.text                        0xb08               0xa78           0xfb4  (4020)
+.dinit                      0x1580                0x40            0x60  (96)
+.text                       0x15c0                0xfc           0x17a  (378)
+.init.delay32               0x16bc                0x1c            0x2a  (42)
+.text                       0x16d8                0x16            0x21  (33)
 
-                 Total "program" memory used (bytes):         0x1ef3  (7923) 12%
+                 Total "program" memory used (bytes):         0x1f65  (8037) 12%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -97,9 +97,9 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x18  (24)
 .ndata                       0x818                   0             0x2  (2)
-.bss                         0x81a                   0           0x440  (1088)
+.bss                         0x81a                   0           0x444  (1092)
 
-                 Total "data" memory used (bytes):          0x45a  (1114) 13%
+                 Total "data" memory used (bytes):          0x45e  (1118) 13%
 
 
 Dynamic Memory Usage
@@ -107,9 +107,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xc5a                              0x1ba6  (7078)
+stack                        0xc5e                              0x1ba2  (7074)
 
-                 Maximum dynamic memory (bytes):         0x1ba6  (7078)
+                 Maximum dynamic memory (bytes):         0x1ba2  (7074)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -117,10 +117,12 @@ Info: Project is using a large data memory model when small data memory model is
 External Symbols in Data Memory (by address):
 
                     0x081a                  _Graphics_OLED_framebuffer
+                    0x0c5a                  _STR_KEY
 
 External Symbols in Data Memory (by name):
 
                     0x081a                  _Graphics_OLED_framebuffer
+                    0x0c5a                  _STR_KEY
 
 External Symbols in Program Memory (by address):
 
@@ -128,99 +130,105 @@ External Symbols in Program Memory (by address):
                   0x00023c                  __psv_init
                   0x000252                  __data_init_standard
                   0x000252                  __data_init
-                  0x0002cc                  __T4Interrupt
-                  0x0002f4                  __DefaultInterrupt
-                  0x000af2                  _Graphics_OLED_init
-                  0x000b2c                  _Graphics_OLED_poll
-                  0x000b38                  _Graphics_OLED_clear
-                  0x000b5e                  _Graphics_OLED_pixel
-                  0x000c0c                  _Graphics_OLED_line
-                  0x000f02                  _Graphics_OLED_print
-                  0x000f1c                  _Graphics_OLED_printAt
-                  0x000f3c                  _SSD1322_OLED_sendCommand
-                  0x000f4c                  _SSD1322_OLED_sendData
-                  0x000f58                  _SSD1322_OLED_setColumn
-                  0x000f6e                  _SSD1322_OLED_setRow
-                  0x000f84                  _SSD1322_OLED_init
-                  0x00102c                  _SSD1322_OLED_clear
-                  0x00105a                  _SSD1322_OLED_refresh
-                  0x001114                  _SSD1322_OLED_setContrast
-                  0x001124                  _SSD1322_OLED_powerOn
-                  0x001130                  _SSD1322_OLED_powerOff
-                  0x0011d0                  _Keyboard_Pad_init
-                  0x001218                  _Keyboard_Pad_setMode
-                  0x001226                  _Keyboard_Pad_poll
-                  0x0013b6                  _Keyboard_Nav_init
-                  0x0013fe                  _Keyboard_Nav_setMode
-                  0x00140c                  _Keyboard_Nav_poll
-                  0x001508                  _PMP_init
-                  0x001518                  _PMP_write
-                  0x001524                  _PMP_read
-                  0x00153a                  _PMP_isBusy
-                  0x001580                  _LEDs_Led1_init
-                  0x001588                  _LEDs_Led1_state
-                  0x0015b8                  _LEDs_Led2_init
-                  0x0015c0                  _LEDs_Led2_state
-                  0x0015f0                  _onReset
-                  0x00160a                  _Keyboard_Pad_onPress
-                  0x001616                  _Keyboard_Nav_onPress
-                  0x001622                  _initSystem
-                  0x001630                  _main
-                  0x00164a                  _getSystemMilis
-                  0x001654                  _callback
-                  0x001666                  _systemTimeInit
-                  0x001670                  ___delay32
-                  0x00168c                  _timer4_init
+                  0x0002d4                  __T4Interrupt
+                  0x0002fc                  __DefaultInterrupt
+                  0x000ae2                  _streamOut_Graphic_OLED
+                  0x000b08                  _Graphics_OLED_init
+                  0x000b42                  _Graphics_OLED_poll
+                  0x000b4e                  _Graphics_OLED_clear
+                  0x000b74                  _Graphics_OLED_pixel
+                  0x000c22                  _Graphics_OLED_line
+                  0x000d6e                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putCharAvailable
+                  0x000d76                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putChar
+                  0x000f20                  _Graphics_OLED_print
+                  0x000f34                  _Graphics_OLED_printAt
+                  0x000f5e                  _SSD1322_OLED_sendCommand
+                  0x000f6e                  _SSD1322_OLED_sendData
+                  0x000f7a                  _SSD1322_OLED_setColumn
+                  0x000f90                  _SSD1322_OLED_setRow
+                  0x000fa6                  _SSD1322_OLED_init
+                  0x00104e                  _SSD1322_OLED_clear
+                  0x00107c                  _SSD1322_OLED_refresh
+                  0x001136                  _SSD1322_OLED_setContrast
+                  0x001146                  _SSD1322_OLED_powerOn
+                  0x001152                  _SSD1322_OLED_powerOff
+                  0x0011f2                  _Keyboard_Pad_init
+                  0x00123a                  _Keyboard_Pad_setMode
+                  0x001248                  _Keyboard_Pad_poll
+                  0x0013d8                  _Keyboard_Nav_init
+                  0x001420                  _Keyboard_Nav_setMode
+                  0x00142e                  _Keyboard_Nav_poll
+                  0x00152a                  _onReset
+                  0x001544                  _Keyboard_Nav_onPress
+                  0x001562                  _Keyboard_Pad_onPress
+                  0x0015c0                  _PMP_init
+                  0x0015d0                  _PMP_write
+                  0x0015dc                  _PMP_read
+                  0x0015f2                  _PMP_isBusy
+                  0x0015fe                  _LEDs_Led1_init
+                  0x001606                  _LEDs_Led1_state
+                  0x001636                  _LEDs_Led2_init
+                  0x00163e                  _LEDs_Led2_state
+                  0x00166e                  _initSystem
+                  0x00167c                  _main
+                  0x001696                  _getSystemMilis
+                  0x0016a0                  _callback
+                  0x0016b2                  _systemTimeInit
+                  0x0016bc                  ___delay32
+                  0x0016d8                  _timer4_init
 
 External Symbols in Program Memory (by name):
 
-                  0x000b38                  _Graphics_OLED_clear
-                  0x000af2                  _Graphics_OLED_init
-                  0x000c0c                  _Graphics_OLED_line
-                  0x000b5e                  _Graphics_OLED_pixel
-                  0x000b2c                  _Graphics_OLED_poll
-                  0x000f02                  _Graphics_OLED_print
-                  0x000f1c                  _Graphics_OLED_printAt
-                  0x0013b6                  _Keyboard_Nav_init
-                  0x001616                  _Keyboard_Nav_onPress
-                  0x00140c                  _Keyboard_Nav_poll
-                  0x0013fe                  _Keyboard_Nav_setMode
-                  0x0011d0                  _Keyboard_Pad_init
-                  0x00160a                  _Keyboard_Pad_onPress
-                  0x001226                  _Keyboard_Pad_poll
-                  0x001218                  _Keyboard_Pad_setMode
-                  0x001580                  _LEDs_Led1_init
-                  0x001588                  _LEDs_Led1_state
-                  0x0015b8                  _LEDs_Led2_init
-                  0x0015c0                  _LEDs_Led2_state
-                  0x001508                  _PMP_init
-                  0x00153a                  _PMP_isBusy
-                  0x001524                  _PMP_read
-                  0x001518                  _PMP_write
-                  0x00102c                  _SSD1322_OLED_clear
-                  0x000f84                  _SSD1322_OLED_init
-                  0x001130                  _SSD1322_OLED_powerOff
-                  0x001124                  _SSD1322_OLED_powerOn
-                  0x00105a                  _SSD1322_OLED_refresh
-                  0x000f3c                  _SSD1322_OLED_sendCommand
-                  0x000f4c                  _SSD1322_OLED_sendData
-                  0x000f58                  _SSD1322_OLED_setColumn
-                  0x001114                  _SSD1322_OLED_setContrast
-                  0x000f6e                  _SSD1322_OLED_setRow
-                  0x0002f4                  __DefaultInterrupt
-                  0x0002cc                  __T4Interrupt
-                  0x001670                  ___delay32
+                  0x000d76                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putChar
+                  0x000d6e                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putCharAvailable
+                  0x000b4e                  _Graphics_OLED_clear
+                  0x000b08                  _Graphics_OLED_init
+                  0x000c22                  _Graphics_OLED_line
+                  0x000b74                  _Graphics_OLED_pixel
+                  0x000b42                  _Graphics_OLED_poll
+                  0x000f20                  _Graphics_OLED_print
+                  0x000f34                  _Graphics_OLED_printAt
+                  0x0013d8                  _Keyboard_Nav_init
+                  0x001544                  _Keyboard_Nav_onPress
+                  0x00142e                  _Keyboard_Nav_poll
+                  0x001420                  _Keyboard_Nav_setMode
+                  0x0011f2                  _Keyboard_Pad_init
+                  0x001562                  _Keyboard_Pad_onPress
+                  0x001248                  _Keyboard_Pad_poll
+                  0x00123a                  _Keyboard_Pad_setMode
+                  0x0015fe                  _LEDs_Led1_init
+                  0x001606                  _LEDs_Led1_state
+                  0x001636                  _LEDs_Led2_init
+                  0x00163e                  _LEDs_Led2_state
+                  0x0015c0                  _PMP_init
+                  0x0015f2                  _PMP_isBusy
+                  0x0015dc                  _PMP_read
+                  0x0015d0                  _PMP_write
+                  0x00104e                  _SSD1322_OLED_clear
+                  0x000fa6                  _SSD1322_OLED_init
+                  0x001152                  _SSD1322_OLED_powerOff
+                  0x001146                  _SSD1322_OLED_powerOn
+                  0x00107c                  _SSD1322_OLED_refresh
+                  0x000f5e                  _SSD1322_OLED_sendCommand
+                  0x000f6e                  _SSD1322_OLED_sendData
+                  0x000f7a                  _SSD1322_OLED_setColumn
+                  0x001136                  _SSD1322_OLED_setContrast
+                  0x000f90                  _SSD1322_OLED_setRow
+                  0x0002fc                  __DefaultInterrupt
+                  0x0002d4                  __T4Interrupt
+                  0x0016bc                  ___delay32
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x001654                  _callback
-                  0x00164a                  _getSystemMilis
-                  0x001622                  _initSystem
-                  0x001630                  _main
-                  0x0015f0                  _onReset
-                  0x001666                  _systemTimeInit
-                  0x00168c                  _timer4_init
+                  0x0016a0                  _callback
+                  0x001696                  _getSystemMilis
+                  0x00166e                  _initSystem
+                  0x00167c                  _main
+                  0x00152a                  _onReset
+                  0x000ae2                  _streamOut_Graphic_OLED
+                  0x0016b2                  _systemTimeInit
+                  0x0016d8                  _timer4_init
 
 Memory Configuration
 
@@ -269,7 +277,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200         0xfa
+.text             0x000200        0x102
  *(.init)
  .init            0x000200         0x4c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
@@ -281,18 +289,18 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0002cc         0x28 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
-                  0x0002cc                  __T4Interrupt
- .isr             0x0002f4          0x4 default_isr
-                  0x0002f4                  __DefaultInterrupt
+ .isr.text        0x0002d4         0x28 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
+                  0x0002d4                  __T4Interrupt
+ .isr             0x0002fc          0x4 default_isr
+                  0x0002fc                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x0002f8          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normal.Meo)
-                  0x0002f8                  __crt_start_mode
-                  0x0002f8                  __crt_start_mode_normal
+                  0x000300          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normal.Meo)
+                  0x000300                  __crt_start_mode
+                  0x000300                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -995,11 +1003,13 @@ __c30_signature
 .ndata              0x0818          0x2
  .ndata             0x0818          0x2 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
 
-.bss                0x081a        0x440
+.bss                0x081a        0x444
  .bss               0x081a        0x400 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
                     0x081a                  _Graphics_OLED_framebuffer
  .bss               0x0c1a         0x24 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o
  .bss               0x0c3e         0x1c C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Nav.o
+ .bss               0x0c5a          0x4 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+                    0x0c5a                  _STR_KEY
 
 .ivt._T4Interrupt
                   0x00004a          0x2
@@ -1013,70 +1023,73 @@ __c30_signature
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\main.o
 
-.const              0x82fa        0x7f8 load address 0x0002fa  
- .const             0x82fa        0x7ec C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
- .const             0x8ae6          0xc C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+.const              0x8302        0x806 load address 0x000302  
+ .const             0x8302        0x7f0 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
+                    0x8ae2                  _streamOut_Graphic_OLED
+ .const             0x8af2         0x16 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
 
-.text             0x000af2        0xa54
- .text            0x000af2        0x44a C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
-                  0x000af2                  _Graphics_OLED_init
-                  0x000b2c                  _Graphics_OLED_poll
-                  0x000b38                  _Graphics_OLED_clear
-                  0x000b5e                  _Graphics_OLED_pixel
-                  0x000c0c                  _Graphics_OLED_line
-                  0x000f02                  _Graphics_OLED_print
-                  0x000f1c                  _Graphics_OLED_printAt
- .text            0x000f3c        0x200 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\SSD1322_OLED.o
-                  0x000f3c                  _SSD1322_OLED_sendCommand
-                  0x000f4c                  _SSD1322_OLED_sendData
-                  0x000f58                  _SSD1322_OLED_setColumn
-                  0x000f6e                  _SSD1322_OLED_setRow
-                  0x000f84                  _SSD1322_OLED_init
-                  0x00102c                  _SSD1322_OLED_clear
-                  0x00105a                  _SSD1322_OLED_refresh
-                  0x001114                  _SSD1322_OLED_setContrast
-                  0x001124                  _SSD1322_OLED_powerOn
-                  0x001130                  _SSD1322_OLED_powerOff
- .text            0x00113c        0x1e6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o
-                  0x0011d0                  _Keyboard_Pad_init
-                  0x001218                  _Keyboard_Pad_setMode
-                  0x001226                  _Keyboard_Pad_poll
- .text            0x001322        0x1e6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Nav.o
-                  0x0013b6                  _Keyboard_Nav_init
-                  0x0013fe                  _Keyboard_Nav_setMode
-                  0x00140c                  _Keyboard_Nav_poll
- .text            0x001508         0x3e C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\pmp.o
-                  0x001508                  _PMP_init
-                  0x001518                  _PMP_write
-                  0x001524                  _PMP_read
-                  0x00153a                  _PMP_isBusy
+.text             0x000b08        0xa78
+ .text            0x000b08        0x456 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
+                  0x000b08                  _Graphics_OLED_init
+                  0x000b42                  _Graphics_OLED_poll
+                  0x000b4e                  _Graphics_OLED_clear
+                  0x000b74                  _Graphics_OLED_pixel
+                  0x000c22                  _Graphics_OLED_line
+                  0x000d6e                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putCharAvailable
+                  0x000d76                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putChar
+                  0x000f20                  _Graphics_OLED_print
+                  0x000f34                  _Graphics_OLED_printAt
+ .text            0x000f5e        0x200 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\SSD1322_OLED.o
+                  0x000f5e                  _SSD1322_OLED_sendCommand
+                  0x000f6e                  _SSD1322_OLED_sendData
+                  0x000f7a                  _SSD1322_OLED_setColumn
+                  0x000f90                  _SSD1322_OLED_setRow
+                  0x000fa6                  _SSD1322_OLED_init
+                  0x00104e                  _SSD1322_OLED_clear
+                  0x00107c                  _SSD1322_OLED_refresh
+                  0x001136                  _SSD1322_OLED_setContrast
+                  0x001146                  _SSD1322_OLED_powerOn
+                  0x001152                  _SSD1322_OLED_powerOff
+ .text            0x00115e        0x1e6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o
+                  0x0011f2                  _Keyboard_Pad_init
+                  0x00123a                  _Keyboard_Pad_setMode
+                  0x001248                  _Keyboard_Pad_poll
+ .text            0x001344        0x1e6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Nav.o
+                  0x0013d8                  _Keyboard_Nav_init
+                  0x001420                  _Keyboard_Nav_setMode
+                  0x00142e                  _Keyboard_Nav_poll
+ .text            0x00152a         0x56 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+                  0x00152a                  _onReset
+                  0x001544                  _Keyboard_Nav_onPress
+                  0x001562                  _Keyboard_Pad_onPress
 
-.dinit            0x001546         0x3a
- .dinit           0x001546         0x3a data_init
+.dinit            0x001580         0x40
+ .dinit           0x001580         0x40 data_init
 
-.text             0x001580         0xf0
- .text            0x001580         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led1.o
-                  0x001580                  _LEDs_Led1_init
-                  0x001588                  _LEDs_Led1_state
- .text            0x0015b8         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led2.o
-                  0x0015b8                  _LEDs_Led2_init
-                  0x0015c0                  _LEDs_Led2_state
- .text            0x0015f0         0x32 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
-                  0x0015f0                  _onReset
-                  0x00160a                  _Keyboard_Pad_onPress
-                  0x001616                  _Keyboard_Nav_onPress
- .text            0x001622         0x28 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\main.o
-                  0x001622                  _initSystem
-                  0x001630                  _main
- .text            0x00164a         0x26 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\systemTimer.o
-                  0x00164a                  _getSystemMilis
-                  0x001654                  _callback
-                  0x001666                  _systemTimeInit
+.text             0x0015c0         0xfc
+ .text            0x0015c0         0x3e C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\pmp.o
+                  0x0015c0                  _PMP_init
+                  0x0015d0                  _PMP_write
+                  0x0015dc                  _PMP_read
+                  0x0015f2                  _PMP_isBusy
+ .text            0x0015fe         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led1.o
+                  0x0015fe                  _LEDs_Led1_init
+                  0x001606                  _LEDs_Led1_state
+ .text            0x001636         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led2.o
+                  0x001636                  _LEDs_Led2_init
+                  0x00163e                  _LEDs_Led2_state
+ .text            0x00166e         0x28 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\main.o
+                  0x00166e                  _initSystem
+                  0x00167c                  _main
+ .text            0x001696         0x26 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\systemTimer.o
+                  0x001696                  _getSystemMilis
+                  0x0016a0                  _callback
+                  0x0016b2                  _systemTimeInit
 
-.init.delay32     0x001670         0x1c
- .init.delay32    0x001670         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                  0x001670                  ___delay32
+.init.delay32     0x0016bc         0x1c
+ .init.delay32    0x0016bc         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
+                  0x0016bc                  ___delay32
 
-.text             0x00168c         0x16
- .text            0x00168c         0x16 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
-                  0x00168c                  _timer4_init
+.text             0x0016d8         0x16
+ .text            0x0016d8         0x16 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
+                  0x0016d8                  _timer4_init

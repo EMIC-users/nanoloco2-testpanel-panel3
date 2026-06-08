@@ -33,7 +33,6 @@ void Keyboard_Nav_onPress(uint8_t key)
 void Keyboard_Pad_onPress(uint8_t key)
 {
     LEDs_Led2_state(2);
-    Graphics_OLED_printAt(0, 40, 0, "TECLA:%u ", key);
 }
 
 
