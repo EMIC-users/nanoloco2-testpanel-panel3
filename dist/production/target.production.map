@@ -254,12 +254,12 @@ section                    address   length (PC units)   length (bytes) (dec)
 .text                        0x200              0x43ea          0x65df  (26079)
 .const                      0x45ea               0x80e           0xc15  (3093)
 .text                       0x4df8              0x150e          0x1f95  (8085)
-.dinit                      0x6306                0xfa           0x177  (375)
-.text                       0x6400               0x20c           0x312  (786)
-.init.delay32               0x660c                0x1c            0x2a  (42)
-.text                       0x6628                0x16            0x21  (33)
+.dinit                      0x6306               0x100           0x180  (384)
+.text                       0x6406               0x20c           0x312  (786)
+.init.delay32               0x6612                0x1c            0x2a  (42)
+.text                       0x662e                0x16            0x21  (33)
 
-                 Total "program" memory used (bytes):         0x965d  (38493) 58%
+                 Total "program" memory used (bytes):         0x9666  (38502) 58%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -268,16 +268,16 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x1c  (28)
 .ndata                       0x81c                   0             0x4  (4)
-.nbss                        0x820                   0             0x2  (2)
-.bss                         0x822                   0           0x840  (2112)
-.data                       0x1062                   0            0x6e  (110)
-.bss                        0x10d0                   0            0x24  (36)
-.data                       0x10f4                   0            0x1e  (30)
-.bss                        0x1112                   0            0x1c  (28)
-.data                       0x112e                   0            0x20  (32)
-.bss                        0x114e                   0             0x8  (8)
+.nbss                        0x820                   0             0x4  (4)
+.bss                         0x824                   0           0x840  (2112)
+.data                       0x1064                   0            0x6e  (110)
+.bss                        0x10d2                   0            0x24  (36)
+.data                       0x10f6                   0            0x1e  (30)
+.bss                        0x1114                   0            0x1c  (28)
+.data                       0x1130                   0            0x20  (32)
+.bss                        0x1150                   0             0x8  (8)
 
-                 Total "data" memory used (bytes):          0x956  (2390) 29%
+                 Total "data" memory used (bytes):          0x958  (2392) 29%
 
 
 Dynamic Memory Usage
@@ -285,9 +285,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x1156                              0x16aa  (5802)
+stack                       0x1158                              0x16a8  (5800)
 
-                 Maximum dynamic memory (bytes):         0x16aa  (5802)
+                 Maximum dynamic memory (bytes):         0x16a8  (5800)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -299,23 +299,25 @@ External Symbols in Data Memory (by address):
                     0x0818                  _i2crfi_indice
                     0x0819                  _stopflag
                     0x081e                  _I2C_ID
-                    0x0c62                  _Graphics_OLED_framebuffer
-                    0x1062                  _i2c2InStream
-                    0x107e                  _i2c2OutStream
-                    0x114e                  _STR_KEY
-                    0x1152                  ___errno_val
+                    0x0820                  _miVar
+                    0x0c64                  _Graphics_OLED_framebuffer
+                    0x1064                  _i2c2InStream
+                    0x1080                  _i2c2OutStream
+                    0x1150                  _STR_KEY
+                    0x1154                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x0c62                  _Graphics_OLED_framebuffer
+                    0x0c64                  _Graphics_OLED_framebuffer
                     0x081e                  _I2C_ID
-                    0x114e                  _STR_KEY
-                    0x1152                  ___errno_val
-                    0x1062                  _i2c2InStream
-                    0x107e                  _i2c2OutStream
+                    0x1150                  _STR_KEY
+                    0x1154                  ___errno_val
+                    0x1064                  _i2c2InStream
+                    0x1080                  _i2c2OutStream
                     0x0816                  _i2crfi_estado
                     0x0817                  _i2crfi_estado_rcv
                     0x0818                  _i2crfi_indice
+                    0x0820                  _miVar
                     0x0819                  _stopflag
 
 External Symbols in Program Memory (by address):
@@ -519,34 +521,34 @@ External Symbols in Program Memory (by address):
                   0x0062d4                  _Stop_I2C2
                   0x0062e6                  _Write_I2C2
                   0x0062f2                  _Read_I2C2
-                  0x006400                  _pI2C
-                  0x00641c                  _EMICBus_init
-                  0x00642a                  _poll_EMICBus
-                  0x0064b6                  _onReset
-                  0x0064d0                  _Keyboard_Nav_onPress
-                  0x0064ee                  _Keyboard_Pad_onPress
-                  0x00650c                  _PMP_init
-                  0x00651c                  _PMP_write
-                  0x006528                  _PMP_read
-                  0x00653e                  _PMP_isBusy
-                  0x00654a                  _LEDs_Led1_init
-                  0x006552                  _LEDs_Led1_state
-                  0x006582                  _LEDs_Led2_init
-                  0x00658a                  _LEDs_Led2_state
-                  0x0065ba                  _initSystem
-                  0x0065c8                  _main
-                  0x0065e6                  _getSystemMilis
-                  0x0065f0                  _callback
-                  0x006602                  _systemTimeInit
-                  0x00660c                  ___delay32
-                  0x006628                  _timer4_init
+                  0x006406                  _pI2C
+                  0x006422                  _EMICBus_init
+                  0x006430                  _poll_EMICBus
+                  0x0064bc                  _onReset
+                  0x0064d6                  _Keyboard_Nav_onPress
+                  0x0064f4                  _Keyboard_Pad_onPress
+                  0x006512                  _PMP_init
+                  0x006522                  _PMP_write
+                  0x00652e                  _PMP_read
+                  0x006544                  _PMP_isBusy
+                  0x006550                  _LEDs_Led1_init
+                  0x006558                  _LEDs_Led1_state
+                  0x006588                  _LEDs_Led2_init
+                  0x006590                  _LEDs_Led2_state
+                  0x0065c0                  _initSystem
+                  0x0065ce                  _main
+                  0x0065ec                  _getSystemMilis
+                  0x0065f6                  _callback
+                  0x006608                  _systemTimeInit
+                  0x006612                  ___delay32
+                  0x00662e                  _timer4_init
 
 External Symbols in Program Memory (by name):
 
                   0x0055fe                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putChar
                   0x0055f6                  C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o:_putCharAvailable
                   0x00626a                  _CollisionReset_I2C2
-                  0x00641c                  _EMICBus_init
+                  0x006422                  _EMICBus_init
                   0x0053d6                  _Graphics_OLED_clear
                   0x005390                  _Graphics_OLED_init
                   0x0054aa                  _Graphics_OLED_line
@@ -566,22 +568,22 @@ External Symbols in Program Memory (by name):
                   0x00627a                  _IsStartI2c2
                   0x006292                  _IsStopI2c2
                   0x005f20                  _Keyboard_Nav_init
-                  0x0064d0                  _Keyboard_Nav_onPress
+                  0x0064d6                  _Keyboard_Nav_onPress
                   0x005f76                  _Keyboard_Nav_poll
                   0x005f68                  _Keyboard_Nav_setMode
                   0x005d3a                  _Keyboard_Pad_init
-                  0x0064ee                  _Keyboard_Pad_onPress
+                  0x0064f4                  _Keyboard_Pad_onPress
                   0x005d90                  _Keyboard_Pad_poll
                   0x005d82                  _Keyboard_Pad_setMode
-                  0x00654a                  _LEDs_Led1_init
-                  0x006552                  _LEDs_Led1_state
-                  0x006582                  _LEDs_Led2_init
-                  0x00658a                  _LEDs_Led2_state
+                  0x006550                  _LEDs_Led1_init
+                  0x006558                  _LEDs_Led1_state
+                  0x006588                  _LEDs_Led2_init
+                  0x006590                  _LEDs_Led2_state
                   0x006272                  _OverflowReset_I2C2
-                  0x00650c                  _PMP_init
-                  0x00653e                  _PMP_isBusy
-                  0x006528                  _PMP_read
-                  0x00651c                  _PMP_write
+                  0x006512                  _PMP_init
+                  0x006544                  _PMP_isBusy
+                  0x00652e                  _PMP_read
+                  0x006522                  _PMP_write
                   0x0062f2                  _Read_I2C2
                   0x005b96                  _SSD1322_OLED_clear
                   0x005aee                  _SSD1322_OLED_init
@@ -604,7 +606,7 @@ External Symbols in Program Memory (by name):
                   0x0003d4                  ___addsf3
                   0x0003d4                  ___addsf3x
                   0x003216                  ___cvt_u
-                  0x00660c                  ___delay32
+                  0x006612                  ___delay32
                   0x003722                  ___divdf3
                   0x003d74                  ___divdi3
                   0x00059e                  ___divsf3
@@ -699,7 +701,7 @@ External Symbols in Program Memory (by name):
                   0x0009c4                  _atoi
                   0x000a24                  _atol
                   0x000a8c                  _atoll
-                  0x0065f0                  _callback
+                  0x0065f6                  _callback
                   0x0040c6                  _copysignl
                   0x005806                  _countI2cStreamIn
                   0x0040fa                  _fabsl
@@ -707,19 +709,19 @@ External Symbols in Program Memory (by name):
                   0x00420a                  _fmodl
                   0x0057f2                  _getAvailable_out_count
                   0x00580e                  _getI2cStreamIn
-                  0x0065e6                  _getSystemMilis
+                  0x0065ec                  _getSystemMilis
                   0x005968                  _i2cCloseWriteFrame
                   0x0059aa                  _i2cOpenReadFrame
                   0x00583c                  _ini_I2C_IN
                   0x005866                  _ini_I2C_OUT
                   0x005890                  _ini_I2C_OUT_FM
-                  0x0065ba                  _initSystem
-                  0x0065c8                  _main
+                  0x0065c0                  _initSystem
+                  0x0065ce                  _main
                   0x00255c                  _memcpy
                   0x000af0                  _memset
-                  0x0064b6                  _onReset
-                  0x006400                  _pI2C
-                  0x00642a                  _poll_EMICBus
+                  0x0064bc                  _onReset
+                  0x006406                  _pI2C
+                  0x006430                  _poll_EMICBus
                   0x005910                  _pop_I2C_IN
                   0x005934                  _pop_I2C_OUT
                   0x005958                  _pop_I2C_OUT_FM
@@ -757,8 +759,8 @@ External Symbols in Program Memory (by name):
                   0x000c22                  _strtod
                   0x000c1c                  _strtof
                   0x000c28                  _strtold
-                  0x006602                  _systemTimeInit
-                  0x006628                  _timer4_init
+                  0x006608                  _systemTimeInit
+                  0x00662e                  _timer4_init
                   0x00259a                  _tolower
                   0x0034b0                  _toupper
                   0x001fdc                  _vfprintf
@@ -2222,43 +2224,45 @@ __xc_reference_data
  .ndata             0x081e          0x2 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\I2C2_driver.o
                     0x081e                  _I2C_ID
 
-.nbss               0x0820          0x2
- .nbss              0x0820          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.XX_o)
-                    0x0820                  _errno
+.nbss               0x0820          0x4
+ .nbss              0x0820          0x2 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+                    0x0820                  _miVar
+ .nbss              0x0822          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.XX_o)
+                    0x0822                  _errno
 
-.bss                0x0822        0x840
- .bss               0x0822        0x440 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\I2C2_driver.o
- .bss               0x0c62        0x400 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
-                    0x0c62                  _Graphics_OLED_framebuffer
+.bss                0x0824        0x840
+ .bss               0x0824        0x440 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\I2C2_driver.o
+ .bss               0x0c64        0x400 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Graphics_OLED.o
+                    0x0c64                  _Graphics_OLED_framebuffer
 
-.data               0x1062         0x6e
- .data              0x1062         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\I2C2_driver.o
-                    0x1062                  _i2c2InStream
-                    0x107e                  _i2c2OutStream
- .data              0x109a         0x36 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(floatscan.XX_o)
+.data               0x1064         0x6e
+ .data              0x1064         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\I2C2_driver.o
+                    0x1064                  _i2c2InStream
+                    0x1080                  _i2c2OutStream
+ .data              0x109c         0x36 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(floatscan.XX_o)
 
-.bss                0x10d0         0x24
- .bss               0x10d0         0x24 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o
+.bss                0x10d2         0x24
+ .bss               0x10d2         0x24 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Pad.o
 
-.data               0x10f4         0x1e
- .data              0x10f4         0x1e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
+.data               0x10f6         0x1e
+ .data              0x10f6         0x1e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
 
-.bss                0x1112         0x1c
- .bss               0x1112         0x1c C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Nav.o
+.bss                0x1114         0x1c
+ .bss               0x1114         0x1c C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\Keyboard_Nav.o
 
-.data               0x112e         0x20
- .data              0x112e         0x10 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
- .data              0x113e         0x10 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
+.data               0x1130         0x20
+ .data              0x1130         0x10 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
+ .data              0x1140         0x10 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
 
-.bss                0x114e          0x8
- .bss               0x114e          0x4 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
-                    0x114e                  _STR_KEY
- .bss               0x1152          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_o)
-                    0x1152                  ___errno_val
- .bss               0x1154          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__stdio_exit.XX_o)
-                    0x1154                  ___stdin_used
-                    0x1154                  ___stdout_used
-                    0x1154                  ___stderr_used
+.bss                0x1150          0x8
+ .bss               0x1150          0x4 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+                    0x1150                  _STR_KEY
+ .bss               0x1154          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_o)
+                    0x1154                  ___errno_val
+ .bss               0x1156          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__stdio_exit.XX_o)
+                    0x1156                  ___stdin_used
+                    0x1156                  ___stdout_used
+                    0x1156                  ___stderr_used
 
 .ivt._T4Interrupt
                   0x00004a          0x2
@@ -2376,41 +2380,41 @@ __xc_reference_data
                   0x0062e6                  _Write_I2C2
                   0x0062f2                  _Read_I2C2
 
-.dinit            0x006306         0xfa
- .dinit           0x006306         0xfa data_init
+.dinit            0x006306        0x100
+ .dinit           0x006306        0x100 data_init
 
-.text             0x006400        0x20c
- .text            0x006400         0xb6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\EMICBus.o
-                  0x006400                  _pI2C
-                  0x00641c                  _EMICBus_init
-                  0x00642a                  _poll_EMICBus
- .text            0x0064b6         0x56 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
-                  0x0064b6                  _onReset
-                  0x0064d0                  _Keyboard_Nav_onPress
-                  0x0064ee                  _Keyboard_Pad_onPress
- .text            0x00650c         0x3e C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\pmp.o
-                  0x00650c                  _PMP_init
-                  0x00651c                  _PMP_write
-                  0x006528                  _PMP_read
-                  0x00653e                  _PMP_isBusy
- .text            0x00654a         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led1.o
-                  0x00654a                  _LEDs_Led1_init
-                  0x006552                  _LEDs_Led1_state
- .text            0x006582         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led2.o
-                  0x006582                  _LEDs_Led2_init
-                  0x00658a                  _LEDs_Led2_state
- .text            0x0065ba         0x2c C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\main.o
-                  0x0065ba                  _initSystem
-                  0x0065c8                  _main
- .text            0x0065e6         0x26 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\systemTimer.o
-                  0x0065e6                  _getSystemMilis
-                  0x0065f0                  _callback
-                  0x006602                  _systemTimeInit
+.text             0x006406        0x20c
+ .text            0x006406         0xb6 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\EMICBus.o
+                  0x006406                  _pI2C
+                  0x006422                  _EMICBus_init
+                  0x006430                  _poll_EMICBus
+ .text            0x0064bc         0x56 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\userFncFile.o
+                  0x0064bc                  _onReset
+                  0x0064d6                  _Keyboard_Nav_onPress
+                  0x0064f4                  _Keyboard_Pad_onPress
+ .text            0x006512         0x3e C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\pmp.o
+                  0x006512                  _PMP_init
+                  0x006522                  _PMP_write
+                  0x00652e                  _PMP_read
+                  0x006544                  _PMP_isBusy
+ .text            0x006550         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led1.o
+                  0x006550                  _LEDs_Led1_init
+                  0x006558                  _LEDs_Led1_state
+ .text            0x006588         0x38 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\led_Led2.o
+                  0x006588                  _LEDs_Led2_init
+                  0x006590                  _LEDs_Led2_state
+ .text            0x0065c0         0x2c C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\main.o
+                  0x0065c0                  _initSystem
+                  0x0065ce                  _main
+ .text            0x0065ec         0x26 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\systemTimer.o
+                  0x0065ec                  _getSystemMilis
+                  0x0065f6                  _callback
+                  0x006608                  _systemTimeInit
 
-.init.delay32     0x00660c         0x1c
- .init.delay32    0x00660c         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
-                  0x00660c                  ___delay32
+.init.delay32     0x006612         0x1c
+ .init.delay32    0x006612         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32.Meo)
+                  0x006612                  ___delay32
 
-.text             0x006628         0x16
- .text            0x006628         0x16 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
-                  0x006628                  _timer4_init
+.text             0x00662e         0x16
+ .text            0x00662e         0x16 C:/Dropbox/EMIC/TARGETS/mariano.hunkeler__rfindustrial.com/TestPanel/Panel3\build\default\production\timer.o
+                  0x00662e                  _timer4_init

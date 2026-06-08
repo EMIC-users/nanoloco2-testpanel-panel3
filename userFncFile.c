@@ -24,7 +24,6 @@ void onReset()
     Graphics_OLED_clear();
     Graphics_OLED_printAt(0, 0, 1, "TECLA TEST");
     LEDs_Led1_state(0);
-    // Unsupported element: emic-user-function-call
 }
 
 
@@ -37,12 +36,17 @@ void Keyboard_Nav_onPress(uint8_t key)
 
 void Keyboard_Pad_onPress(uint8_t key)
 {
-    // Unsupported element: emic-user-function
     LEDs_Led2_state(2);
-    // Unsupported element: emic-user-function
-    // Unsupported element: emic-user-function-call
     Graphics_OLED_printAt(0, 30, 0, "TECLA:%u ", key);
-    // Unsupported element: emic-user-function
+}
+
+
+void pantalla_inicio()
+{
+    Graphics_OLED_clear();
+    Graphics_OLED_line(0, 0, 127, 0);
+    Graphics_OLED_line(0, 63, 127, 63);
+    Graphics_OLED_printAt(10, 30, 1, "INICIALIZANDO");
 }
 
 
