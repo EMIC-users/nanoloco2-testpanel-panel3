@@ -14,6 +14,9 @@
 /*==================[internal data]=========================================*/
 
 uint64_t Graphics_OLED_framebuffer[GFX_OLED_WIDTH];
+
+static void putChar(char c);
+static uint16_t putCharAvailable(void);
 const streamOut_t streamOut_Graphic_OLED = {putChar, putCharAvailable};
 
 static int16_t cursorX = 0;
